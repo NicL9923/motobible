@@ -42,6 +42,11 @@ function App() {
         <Route path="/chatroom/:uid" component={ChatroomComponent}/>
         <Route path="/minigames/:uid" component={MinigamesComponent}/>
         <Route path="/resources" component={ResourcesComponent}/>
+
+        <footer className='footer mt-auto py-3 bg-dark text-white'>
+          <div className='container'>Sticky footer</div>
+        </footer>
+
       </div>
 
     </Router>
