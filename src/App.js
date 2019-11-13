@@ -25,7 +25,7 @@ function App() {
                 <Link to="/blog" className="nav-link">Blog</Link>
               </li>
               <li className="navbar-item">
-                <Link to="/chatroom" className="nav-link">Live Chat</Link>
+                <Link to="/chatroom" className="nav-link">Chatroom</Link>
               </li>
               <li className="navbar-item">
                 <Link to="/minigames" className="nav-link">Minigames</Link>
@@ -39,12 +39,35 @@ function App() {
         
         <Route path="/" exact component={HomeComponent}/>
         <Route path="/blog" component={BlogComponent}/>
-        <Route path="/chatroom/:uid" component={ChatroomComponent}/>
-        <Route path="/minigames/:uid" component={MinigamesComponent}/>
+        <Route path="/chatroom/" component={ChatroomComponent}/>
+        <Route path="/minigames/" component={MinigamesComponent}/>
         <Route path="/resources" component={ResourcesComponent}/>
 
-        <footer className='footer mt-auto py-3 bg-dark text-white'>
-          <div className='container'>Sticky footer</div>
+        <footer className="footer mt-auto py-3 bg-dark text-white">
+          <div className="container-fluid row">
+            <div className='col'>
+              Newsletter signup for blog updates, policy updates, etc.
+            </div>
+            <div className='col'>
+              Moto Bible About/Mission/etc
+            </div>
+            <div className='col'>
+              Social icon links
+            </div>
+          </div>
+
+          <div className="container-fluid row">
+            contact info
+          </div>
+
+          <div className="container-fluid row">
+          <div className='col'>
+              Privacy policy and other
+            </div>
+            <div className='col'>
+            © 2019 themotobible.com (Nicolas Layne) All Rights Reserved
+            </div>
+          </div>
         </footer>
 
       </div>

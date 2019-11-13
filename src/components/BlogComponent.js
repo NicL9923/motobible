@@ -4,7 +4,7 @@ class BlogComponent extends React.Component {
     render() {
         return (
             <div>
-                
+                placeholder
             </div>
         );
     }

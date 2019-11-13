@@ -4,7 +4,7 @@ class HomeComponent extends React.Component {
     render() {
         return(
             <div>
-                <div>Home page gif TODO</div>
+                <img src="asd" alt="Cruising motorcycle" />
                 
                 <div>
                     <h3>Motorcyclist's Bible</h3>
@@ -25,7 +25,7 @@ class HomeComponent extends React.Component {
                     <p>Nicolas Layne</p>
                 </div>
 
-                <div>Newsletter signup and/or contact us form?</div>
+                <div>Contact Us Form</div>
             </div>
 
         );
