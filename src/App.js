@@ -16,7 +16,7 @@ function App() {
 
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <a className="navbar-brand" href="/" target="_blank">
-            <img src={logo} width="30" height="30" alt="MotorcyclistsBible.com"/>
+            <img src={logo} width="30" height="30" alt="TheMotoBible.com"/>
           </a>
           <Link to="/" className="navbar-brand">Home</Link>
           <div className="collpase nav-collapse">

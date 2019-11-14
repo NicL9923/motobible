@@ -1,10 +1,16 @@
 import React from 'react';
+import Clock from './subcomponents/Clock';
 
 class HomeComponent extends React.Component {
     render() {
         return(
             <div>
-                <img src="asd" alt="Cruising motorcycle" />
+                <div>
+                    <img src="asd" alt="Cruising motorcycle"/>
+                    <img src="asd" alt="Static motorcycle"/>
+                    <div>buttons to change moto (cruiser, sport, standard)</div>
+                    <Clock/>
+                </div>
                 
                 <div>
                     <h3>Motorcyclist's Bible</h3>
@@ -25,7 +31,21 @@ class HomeComponent extends React.Component {
                     <p>Nicolas Layne</p>
                 </div>
 
-                <div>Contact Us Form</div>
+                <div>
+                    <h3>Contact Us</h3>
+                    <form name="contactUsForm" onSubmit="" action="" method="post">
+                        <h4>Name:</h4>
+                        <input type="text" placeholder="Name" name="name" required/>
+
+                        <h4>Email:</h4>
+                        <input type="email" placeholder="Email" name="_replyto" required/>
+
+                        <h4>Message:</h4>
+                        <textarea rows="4" cols="50" placeholder="Message" name="message" required/>
+
+                        <input type="submit" value="Send"/>
+                    </form>
+                </div>
             </div>
 
         );
