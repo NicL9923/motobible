@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./resources/motoBibleLogo.png";
 
 import HomeComponent from "./components/HomeComponent";
@@ -14,27 +13,28 @@ function App() {
     <Router>
       <div className="container">
 
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand navbar-dark bg-dark">
           <a className="navbar-brand" href="/" target="_blank">
             <img src={logo} width="30" height="30" alt="TheMotoBible.com"/>
           </a>
           <Link to="/" className="navbar-brand">Home</Link>
-          <div className="collpase nav-collapse">
+          <div className="navbar-collapse">
             <ul className="navbar-nav mr-auto">
               <li className="navbar-item">
                 <Link to="/blog" className="nav-link">Blog</Link>
               </li>
-              <li className="navbar-item">
+              <li className="nav-item">
                 <Link to="/chatroom" className="nav-link">Chatroom</Link>
               </li>
-              <li className="navbar-item">
+              <li className="nav-item">
                 <Link to="/minigames" className="nav-link">Minigames</Link>
               </li>
-              <li className="navbar-item">
+              <li className="nav-item">
                 <Link to="/resources" className="nav-link">Resources</Link>
               </li>
             </ul>
           </div>
+          <div>Social icons</div>
         </nav>
         
         <Route path="/" exact component={HomeComponent}/>
@@ -43,29 +43,35 @@ function App() {
         <Route path="/minigames/" component={MinigamesComponent}/>
         <Route path="/resources" component={ResourcesComponent}/>
 
-        <footer className="footer mt-auto py-3 bg-dark text-white">
+        <footer className="footer bg-dark text-light text-center">
           <div className="container-fluid row">
             <div className='col'>
-              Newsletter signup for blog updates, policy updates, etc.
+              <div>
+                Newsletter signup for blog updates, policy updates, etc.
+                <input onSubmit="" type="email" className="" name="newsletterEmail" value="Email"/>
+              </div>
+              <p>contact info</p>
             </div>
             <div className='col'>
-              Moto Bible About/Mission/etc
+              <p>Moto Bible About/Mission/etc</p>
+              <p>Privacy policy and other</p>
             </div>
             <div className='col'>
-              Social icon links
+              <p>Social icon links</p>
+              <p>© 2019 themotobible.com (Nicolas Layne) All Rights Reserved</p>
             </div>
           </div>
 
           <div className="container-fluid row">
-            contact info
+            
           </div>
 
           <div className="container-fluid row">
           <div className='col'>
-              Privacy policy and other
+              
             </div>
             <div className='col'>
-            © 2019 themotobible.com (Nicolas Layne) All Rights Reserved
+            
             </div>
           </div>
         </footer>

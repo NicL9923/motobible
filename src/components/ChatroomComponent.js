@@ -1,6 +1,5 @@
 import React from 'react';
 import WidgetBot from '@widgetbot/react-embed';
-import "bootstrap/dist/css/bootstrap.min.css";
 
 class ChatroomComponent extends React.Component {
     render() {

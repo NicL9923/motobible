@@ -34,16 +34,22 @@ class HomeComponent extends React.Component {
                 <div>
                     <h3>Contact Us</h3>
                     <form name="contactUsForm" onSubmit="" action="" method="post">
-                        <h4>Name:</h4>
-                        <input type="text" placeholder="Name" name="name" required/>
+                        <div className="form-group">
+                            <h4>Name:</h4>
+                            <input className="validate" type="text" placeholder="Name" name="name" required/>
+                        </div>
 
-                        <h4>Email:</h4>
-                        <input type="email" placeholder="Email" name="_replyto" required/>
+                        <div className="form-group">
+                            <h4>Email:</h4>
+                            <input className="validate" type="email" placeholder="Email" name="_replyto" required/>
+                        </div>
 
-                        <h4>Message:</h4>
-                        <textarea rows="4" cols="50" placeholder="Message" name="message" required/>
+                        <div className="form-group">
+                            <h4>Message:</h4>
+                            <textarea className="materialize-textarea validate" rows="4" cols="50" placeholder="Message" name="message" required/>
+                        </div>
 
-                        <input type="submit" value="Send"/>
+                        <input className="btn btn-primary" type="submit" value="Send"/>
                     </form>
                 </div>
             </div>

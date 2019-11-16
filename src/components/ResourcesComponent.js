@@ -7,31 +7,21 @@ class ResourcesComponent extends React.Component {
                 <div>
                     <h3>Community</h3>
                     <h5>Reddit</h5>
-                    <p>r/motorcycles</p>
-                    <a>https://www.reddit.com/r/motorcycles/</a>
+                    <a href="https://www.reddit.com/r/motorcycles/">r/motorcycles</a>
 
                     <h5>Youtube Channels</h5>
-                    <p>DirtbikeLunatic</p>
-                    <a>youtube.com/user/TTheEveryThingg</a>
-                    <p>Motomadness</p>
-                    <a>youtube.com/user/dirtyhusky69</a>
-                    <p>DanDanTheFireman</p>
-                    <a>youtube.com/user/Stubbs928</a>
-                    <p>Jake TheGardenSnake</p>
-                    <a>youtube.com/user/TheGardenSnake</a>
-                    <p>Walterrific</p>
-                    <a>youtube.com/user/Walterrificonline</a>
-                    <p>6Foot4Honda</p>
-                    <a>youtube.com/user/6Foot4Honda</a>
-                    <p>Snowcat</p>
-                    <a>youtube.com/user/snowcatxx87</a>
-                    <p>Chase OnTwoWheels</p>
-                    <a>youtube.com/user/chaseontwowheels</a>
+                    <p><a href="https://youtube.com/user/TTheEveryThingg">DirtbikeLunatic</a></p>
+                    <p><a href="https://youtube.com/user/dirtyhusky69">Motomadness</a></p>
+                    <p><a href="https://youtube.com/user/Stubbs928">DanDanTheFireman</a></p>
+                    <p><a href="https://youtube.com/user/TheGardenSnake">Jake TheGardenSnake</a></p>
+                    <p><a href="https://youtube.com/user/Walterrificonline">Walterrific</a></p>
+                    <p><a href="https://youtube.com/user/6Foot4Honda">6Foot4Honda</a></p>
+                    <p><a href="https://youtube.com/user/snowcatxx87">Snowcat</a></p>
+                    <p><a href="https://youtube.com/user/chaseontwowheels">Chase OnTwoWheels</a></p>
 
 
                     <h5>Gear Stores</h5>
-                    <p>Revzilla</p>
-                    <a>www.revzilla.com</a>
+                    <a href="https://revzilla.com">Revzilla</a>
                 </div>
 
                 <div>
@@ -43,7 +33,9 @@ class ResourcesComponent extends React.Component {
                 </div>
 
                 <div>
-                    <h3>Laws: I live in <select name="places" onChange="">
+                    <h3>Laws: I live in
+                    <select name="places" onChange="">
+                            <option hidden disabled selected value></option>
                         <optgroup label="United States">
                             <option value="texas">Alabama</option>
                             <option value="virginia">Alaska</option>
@@ -101,7 +93,8 @@ class ResourcesComponent extends React.Component {
                             <option value="uk">United Kingdom</option>
                             <option value="germany">Germany</option>
                         </optgroup>
-                        </select>.</h3>
+                        </select>
+                        .</h3>
                     <p>*(Helmet, lanesplitting, etc. for that state/country)</p>
                 </div>
             </div>
