@@ -1,18 +1,18 @@
 import React from 'react';
-import Clock from './subcomponents/Clock';
+import ContactForm from './subcomponents/ContactForm';
+import cruiseGIF from '../resources/MotoCruiseGIF.gif';
 
 class HomeComponent extends React.Component {
     render() {
         return(
-            <div>
-                <div>
-                    <img src="asd" alt="Cruising motorcycle"/>
-                    <img src="asd" alt="Static motorcycle"/>
-                    <div>buttons to change moto (cruiser, sport, standard)</div>
-                    <Clock/>
+            <div className="container bg-light">
+                <div className="img-fluid">
+                    <img src={cruiseGIF} alt="Cruising motorcycle"/>
+                    {/*buttons to change moto (cruiser, sport, standard)
+                    buttons to change environment (woodlands, desert, snow)*/}
                 </div>
                 
-                <div>
+                <div className="container">
                     <h3>Motorcyclist's Bible</h3>
                     <p>Welcome to the Motorcyclist's Bible, or Moto Bible for short! Here we aim
                         to offer all riders valuable information, guidance, and ways to get connected
@@ -31,27 +31,7 @@ class HomeComponent extends React.Component {
                     <p>Nicolas Layne</p>
                 </div>
 
-                <div>
-                    <h3>Contact Us</h3>
-                    <form name="contactUsForm" onSubmit="" action="" method="post">
-                        <div className="form-group">
-                            <h4>Name:</h4>
-                            <input className="validate" type="text" placeholder="Name" name="name" required/>
-                        </div>
-
-                        <div className="form-group">
-                            <h4>Email:</h4>
-                            <input className="validate" type="email" placeholder="Email" name="_replyto" required/>
-                        </div>
-
-                        <div className="form-group">
-                            <h4>Message:</h4>
-                            <textarea className="materialize-textarea validate" rows="4" cols="50" placeholder="Message" name="message" required/>
-                        </div>
-
-                        <input className="btn btn-primary" type="submit" value="Send"/>
-                    </form>
-                </div>
+                <ContactForm/>
             </div>
 
         );

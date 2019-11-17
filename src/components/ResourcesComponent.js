@@ -3,36 +3,42 @@ import React from 'react';
 class ResourcesComponent extends React.Component {
     render() {
         return(
-            <div>
-                <div>
-                    <h3>Community</h3>
-                    <h5>Reddit</h5>
-                    <a href="https://www.reddit.com/r/motorcycles/">r/motorcycles</a>
-
-                    <h5>Youtube Channels</h5>
-                    <p><a href="https://youtube.com/user/TTheEveryThingg">DirtbikeLunatic</a></p>
-                    <p><a href="https://youtube.com/user/dirtyhusky69">Motomadness</a></p>
-                    <p><a href="https://youtube.com/user/Stubbs928">DanDanTheFireman</a></p>
-                    <p><a href="https://youtube.com/user/TheGardenSnake">Jake TheGardenSnake</a></p>
-                    <p><a href="https://youtube.com/user/Walterrificonline">Walterrific</a></p>
-                    <p><a href="https://youtube.com/user/6Foot4Honda">6Foot4Honda</a></p>
-                    <p><a href="https://youtube.com/user/snowcatxx87">Snowcat</a></p>
-                    <p><a href="https://youtube.com/user/chaseontwowheels">Chase OnTwoWheels</a></p>
-
-
-                    <h5>Gear Stores</h5>
-                    <a href="https://revzilla.com">Revzilla</a>
+            <div className="container bg-light">
+                <div className="container">
+                    <div className="container">
+                        <h3>Community</h3>
+                        <h5>Reddit</h5>
+                        <a href="https://www.reddit.com/r/motorcycles/">r/motorcycles</a>
+                    </div>
+                    <div className="container">
+                        <h5>Youtube Channels</h5>
+                        <p><a href="https://youtube.com/user/TTheEveryThingg">DirtbikeLunatic</a></p>
+                        <p><a href="https://youtube.com/user/dirtyhusky69">Motomadness</a></p>
+                        <p><a href="https://youtube.com/user/Stubbs928">DanDanTheFireman</a></p>
+                        <p><a href="https://youtube.com/user/TheGardenSnake">Jake TheGardenSnake</a></p>
+                        <p><a href="https://youtube.com/user/Walterrificonline">Walterrific</a></p>
+                        <p><a href="https://youtube.com/user/6Foot4Honda">6Foot4Honda</a></p>
+                        <p><a href="https://youtube.com/user/snowcatxx87">Snowcat</a></p>
+                        <p><a href="https://youtube.com/user/chaseontwowheels">Chase OnTwoWheels</a></p>
+                    </div>
+                    <div className="container">
+                        <h5>Gear Stores</h5>
+                        <a href="https://revzilla.com">Revzilla</a>
+                    </div>
                 </div>
 
-                <div>
-                    <h3>How to get YOUR Class M license</h3>
-                    <p>insert step by step here (cost, courses, classes, process, etc.)</p>
-
-                    <h3>...or your INTERNATIONAL motorcycle license</h3>
-                    <p>insert step by step here (cost, courses, classes, process, etc.)</p>
+                <div className="container">
+                    <div className="container">
+                        <h3>How to get YOUR Class M license</h3>
+                        <p>insert step by step here (cost, courses, classes, process, etc.)</p>
+                    </div>
+                    <div className="container">
+                        <h3>...or your INTERNATIONAL motorcycle license</h3>
+                        <p>insert step by step here (cost, courses, classes, process, etc.)</p>
+                    </div>
                 </div>
 
-                <div>
+                <div className="container">
                     <h3>Laws: I live in
                     <select name="places" onChange="">
                             <option hidden disabled selected value></option>

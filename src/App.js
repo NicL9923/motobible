@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import logo from "./resources/motoBibleLogo.png";
 
+import Clock from './components/subcomponents/Clock';
+
 import HomeComponent from "./components/HomeComponent";
 import BlogComponent from "./components/BlogComponent";
 import ChatroomComponent from "./components/ChatroomComponent";
@@ -11,7 +13,7 @@ import ResourcesComponent from "./components/ResourcesComponent";
 function App() {
   return (
     <Router>
-      <div className="container">
+      <div className="container bg-light">
 
         <nav className="navbar navbar-expand navbar-dark bg-dark">
           <a className="navbar-brand" href="/" target="_blank">
@@ -20,7 +22,7 @@ function App() {
           <Link to="/" className="navbar-brand">Home</Link>
           <div className="navbar-collapse">
             <ul className="navbar-nav mr-auto">
-              <li className="navbar-item">
+              <li className="nav-item">
                 <Link to="/blog" className="nav-link">Blog</Link>
               </li>
               <li className="nav-item">
@@ -34,7 +36,7 @@ function App() {
               </li>
             </ul>
           </div>
-          <div>Social icons</div>
+          <Clock/>
         </nav>
         
         <Route path="/" exact component={HomeComponent}/>
@@ -58,20 +60,7 @@ function App() {
             </div>
             <div className='col'>
               <p>Social icon links</p>
-              <p>© 2019 themotobible.com (Nicolas Layne) All Rights Reserved</p>
-            </div>
-          </div>
-
-          <div className="container-fluid row">
-            
-          </div>
-
-          <div className="container-fluid row">
-          <div className='col'>
-              
-            </div>
-            <div className='col'>
-            
+              <p>© 2019 themotobible.com All Rights Reserved</p>
             </div>
           </div>
         </footer>
