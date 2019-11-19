@@ -4,13 +4,13 @@ class ResourcesComponent extends React.Component {
     render() {
         return(
             <div className="container bg-light">
-                <div className="container">
-                    <div className="container">
+                <div className="container card card-body">
+                    <div className="container my-2">
                         <h3>Community</h3>
                         <h5>Reddit</h5>
                         <a href="https://www.reddit.com/r/motorcycles/">r/motorcycles</a>
                     </div>
-                    <div className="container">
+                    <div className="container my-2">
                         <h5>Youtube Channels</h5>
                         <p><a href="https://youtube.com/user/TTheEveryThingg">DirtbikeLunatic</a></p>
                         <p><a href="https://youtube.com/user/dirtyhusky69">Motomadness</a></p>
@@ -27,18 +27,18 @@ class ResourcesComponent extends React.Component {
                     </div>
                 </div>
 
-                <div className="container">
-                    <div className="container">
+                <div className="container card card-body my-4">
+                    <div className="container my-2">
                         <h3>How to get YOUR Class M license</h3>
                         <p>insert step by step here (cost, courses, classes, process, etc.)</p>
                     </div>
-                    <div className="container">
+                    <div className="container my-2">
                         <h3>...or your INTERNATIONAL motorcycle license</h3>
                         <p>insert step by step here (cost, courses, classes, process, etc.)</p>
                     </div>
                 </div>
 
-                <div className="container">
+                <div className="container card card-body my-4">
                     <h3>Laws: I live in
                     <select name="places" onChange="">
                             <option hidden disabled selected value></option>

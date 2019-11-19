@@ -15,12 +15,17 @@ function App() {
     <Router>
       <div className="container bg-light">
 
-        <nav className="navbar navbar-expand navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
           <a className="navbar-brand" href="/" target="_blank">
             <img src={logo} width="30" height="30" alt="TheMotoBible.com"/>
           </a>
           <Link to="/" className="navbar-brand">Home</Link>
-          <div className="navbar-collapse">
+
+          <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#collapsedStuff" aria-controls="collapsedStuff" aria-expanded="false">
+            <span className="navbar-toggler-icon"/>
+          </button>
+
+          <div id="collapsedStuff" className="collapse navbar-collapse">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                 <Link to="/blog" className="nav-link">Blog</Link>
@@ -35,8 +40,8 @@ function App() {
                 <Link to="/resources" className="nav-link">Resources</Link>
               </li>
             </ul>
+            <Clock/>
           </div>
-          <Clock/>
         </nav>
         
         <Route path="/" exact component={HomeComponent}/>
@@ -50,7 +55,7 @@ function App() {
             <div className='col'>
               <div>
                 Newsletter signup for blog updates, policy updates, etc.
-                <input onSubmit="" type="email" className="" name="newsletterEmail" value="Email"/>
+                <input onSubmit="" type="email" className="" name="newsletterEmail" placeholder="Email"/>
               </div>
               <p>contact info</p>
             </div>

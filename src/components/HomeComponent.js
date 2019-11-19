@@ -6,13 +6,13 @@ class HomeComponent extends React.Component {
     render() {
         return(
             <div className="container bg-light">
-                <div className="img-fluid">
-                    <img src={cruiseGIF} alt="Cruising motorcycle"/>
+                <div className="container-fluid text-center">
+                    <img className="img-responsive mx-auto" src={cruiseGIF} alt="Cruising motorcycle"/>
                     {/*buttons to change moto (cruiser, sport, standard)
                     buttons to change environment (woodlands, desert, snow)*/}
                 </div>
                 
-                <div className="container">
+                <div className="container card card-body my-4">
                     <h3>Motorcyclist's Bible</h3>
                     <p>Welcome to the Motorcyclist's Bible, or Moto Bible for short! Here we aim
                         to offer all riders valuable information, guidance, and ways to get connected

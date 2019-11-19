@@ -13,7 +13,7 @@ class ContactForm extends React.Component {
     
     render() {
         return(
-            <div className="container">
+            <div className="container card card-body my-5">
                     <h3>Contact Us</h3>
                     <form name="contactUsForm" onSubmit="" action="" method="post">
                         <div className="form-group">
