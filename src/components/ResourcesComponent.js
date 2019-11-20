@@ -38,7 +38,7 @@ class ResourcesComponent extends React.Component {
                     </div>
                 </div>
 
-                <div className="container card card-body my-4">
+                <div className="container-fluid card card-body my-4">
                     <h3>Laws: I live in
                     <select name="places" onChange="">
                             <option hidden disabled selected value></option>

@@ -1,17 +1,45 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import fire from "./firebase";
 import logo from "./resources/motoBibleLogo.png";
-
-import Clock from './components/subcomponents/Clock';
 
 import HomeComponent from "./components/HomeComponent";
 import BlogComponent from "./components/BlogComponent";
 import ChatroomComponent from "./components/ChatroomComponent";
 import MinigamesComponent from "./components/MinigamesComponent";
 import ResourcesComponent from "./components/ResourcesComponent";
+import LoginComponent from "./components/LoginComponent";
+import RegisterComponent from "./components/RegisterComponent";
+import AdminComponent from "./components/AdminComponent";
+import LogoutComponent from "./components/LogoutComponent";
 
-function App() {
-  return (
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      user: {}
+    }
+  }
+
+  authCheck = () => {
+    fire.auth().onAuthStateChanged(user => {
+      if (user) {
+        // User is signed in.
+        this.setState({ user });
+      } else {
+        // User is signed out.
+        this.setState({ user: null });
+      }
+    });
+  }
+
+  componentDidMount() {
+    this.authCheck();
+  }
+  
+  render() {
+    return (
     <Router>
       <div className="container bg-light">
 
@@ -40,7 +68,11 @@ function App() {
                 <Link to="/resources" className="nav-link">Resources</Link>
               </li>
             </ul>
-            <Clock/>
+            <div className="navbar-nav">
+              {/*If the user is signed in, display Logout, otherwise Login/Register*/}
+              {this.state.user ? (<Link to="/logout" className="nav-link">Logout</Link>) : (<div className="row"><Link to="/login" className="nav-link">Login</Link>
+                                        <Link to="/register" className="nav-link">Register</Link></div>)}
+            </div>
           </div>
         </nav>
         
@@ -50,20 +82,31 @@ function App() {
         <Route path="/minigames/" component={MinigamesComponent}/>
         <Route path="/resources" component={ResourcesComponent}/>
 
-        <footer className="footer bg-dark text-light text-center">
-          <div className="container-fluid row">
+        <Route path="/login" component={LoginComponent}/>
+        <Route path="/register" component={RegisterComponent}/>
+        <Route path="/logout" component={LogoutComponent}/>
+
+        <Route path="/admin" component={AdminComponent}/>
+
+        <footer className="footer bg-dark text-light">
+          <div className="container-fluid row p-6">
             <div className='col'>
-              <div>
-                Newsletter signup for blog updates, policy updates, etc.
-                <input onSubmit="" type="email" className="" name="newsletterEmail" placeholder="Email"/>
+              <div className="container">
+                <p>Sign up for our weekly newsletter:</p>
+                <input onSubmit="" type="email" className="form-control" name="newsletterEmail" placeholder="Email"/>
               </div>
-              <p>contact info</p>
+              <div className="container">
+                <p>support@themotobible.com</p>
+                <p>Based in Houston, TX</p>
+              </div>
             </div>
-            <div className='col'>
-              <p>Moto Bible About/Mission/etc</p>
-              <p>Privacy policy and other</p>
+            <div className='col text-center'>
+              <h5>About Us</h5>
+              <p>The Motorcyclist's Bible, or Moto Bible, was made
+
+              </p>
             </div>
-            <div className='col'>
+            <div className='col text-right'>
               <p>Social icon links</p>
               <p>© 2019 themotobible.com All Rights Reserved</p>
             </div>
@@ -73,7 +116,8 @@ function App() {
       </div>
 
     </Router>
-  );
-}
+    );
+  }
+};
 
 export default App;
