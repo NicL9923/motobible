@@ -11,6 +11,10 @@ class AdminComponent extends React.Component {
                 <div className="card card-body my-4">
                     Manage leaderboards
                 </div>
+
+                <div className="card card-body my-4">
+                    Manage contact messages
+                </div>
             </div>
         );
     }

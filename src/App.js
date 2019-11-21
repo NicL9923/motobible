@@ -94,6 +94,7 @@ class App extends React.Component {
               <div className="container">
                 <p>Sign up for our weekly newsletter:</p>
                 <input onSubmit="" type="email" className="form-control" name="newsletterEmail" placeholder="Email"/>
+                <input className="btn btn-primary mt-1" type="submit" value="Subscribe"/>
               </div>
               <div className="container">
                 <p>support@themotobible.com</p>
