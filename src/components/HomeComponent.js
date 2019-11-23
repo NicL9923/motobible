@@ -8,7 +8,7 @@ class HomeComponent extends React.Component {
         return(
             <div className="container bg-light">
                 <div className="container-fluid text-center">
-                    <img className="img-responsive mx-auto" src={cruiseGIF} alt="Cruising motorcycle"/>
+                    <img className="img-fluid mx-auto" src={cruiseGIF} alt="Cruising motorcycle"/>
                     {/*buttons to change moto (cruiser, sport, standard)
                     buttons to change environment (woodlands, desert, snow)*/}
                     <Clock/>

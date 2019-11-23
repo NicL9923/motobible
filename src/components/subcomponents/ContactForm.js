@@ -8,7 +8,8 @@ class ContactForm extends React.Component {
         this.state = {
             name: "",
             email: "",
-            message: ""
+            message: "",
+            formWasSubmitted: false
         }
     }
     
@@ -20,6 +21,7 @@ class ContactForm extends React.Component {
 
     sendData = e => {
         e.preventDefault();
+        this.setState({ formWasSubmitted: true });
 
         const db = firebase.firestore();
         db.settings({
@@ -38,6 +40,9 @@ class ContactForm extends React.Component {
         .catch(error => {
             console.error("Error adding document: ", error);
         });
+
+        this.setState({ formWasSubmitted: true });
+
     }
 
     render() {
@@ -59,8 +64,8 @@ class ContactForm extends React.Component {
                             <h4>Message:</h4>
                             <textarea className="form-control" value={this.state.message} onChange={this.inputChange} placeholder="Message" name="message" required/>
                         </div>
-
-                        <input className="btn btn-primary" type="submit" value="Send"/>
+                        {this.state.formWasSubmitted ? (<div className="alert alert-success" role="alert">Your message was successfully sent! We will get back to you shortly.</div>) : (<input className="btn btn-primary" type="submit" value="Send"/>)}
+                        
                     </form>
             </div>
         );

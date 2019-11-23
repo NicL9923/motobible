@@ -9,7 +9,7 @@ const gmailPassword = functions.config().gmail.pass;
 admin.initializeApp();
 
 //Function to send emails
-let goMail = message => {
+let sendEmail = message => {
 
 //Transporter is a way to send emails
     const transporter = nodemailer.createTransport({
@@ -24,10 +24,10 @@ let goMail = message => {
     //(How the email will look)
     const mailOptions = {
         from: gmailEmail, //Sender address
-        to: 'nicl9923@gmail.com', //List of receivers
+        to: gmailEmail, //List of receivers
         subject: 'New MotoBible Message', //Subject line
-        text: '!' + message, //Plain Text body
-        html: '!' + message //HTML body
+        text: 'Message: ' + message, //Plain Text body
+        html: 'Message: ' + message //HTML body
     };
 
     //Callback function to return status to firebase console
@@ -44,13 +44,12 @@ let goMail = message => {
 };
 
 //.onDataAdded watches for changes in database
-exports.onDataAdded = functions.database.ref('/emails/{sessionId}').onCreate(function (snap, context) {
+exports.onMessageAdded = functions.firestore.document('/messages/{msgID}').onCreate((snap, context) => {
 
-    //Here we catch new data, add it to firebase database/store it in a snap variable
-    const createdData = snap.val();
-    let text = createdData.mail;
+    //Get the message
+    let msg = snap.get('name') + '\n' + snap.get('email') + '\n' + snap.get('message');
 
     //Send new data using function for sending emails
-    goMail(text);
+    sendEmail(msg);
 });
 
