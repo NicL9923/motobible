@@ -34,6 +34,7 @@ class FooterComponent extends React.Component {
     
     //Change to something more fancy later
     alert("Successfully subscribed!");
+    this.setState({ email: "" });
   }
 
   render() {

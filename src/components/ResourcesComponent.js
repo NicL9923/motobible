@@ -31,15 +31,46 @@ class ResourcesComponent extends React.Component {
                     <div className="container my-2">
                         <h3>How to get YOUR Class M license</h3>
                         <p>To start, there are a couple ways to go about getting
-                            that coveted 'M' on your driver's license.
+                            that coveted 'M' on your driver's license. These are the general steps
+                            and lack region-specific requirements so check your local DPS (Department of
+                            Public Safety) for yours to be sure.
                         </p>
 
                         <h4>The DPS Test Route</h4>
+                        <p>Through this method of getting your motorcycle license, 
+                            the general flow of things involves:
+                        </p>
+                        <ol>
+                            <li>Getting your motorcycle PERMIT</li>
+                            <li>Practicing, gaining experience, and taking the online course</li>
+                            <li>Taking a written and riding test at the DMV</li>
+                        </ol>
                         <p>asd</p>
 
                         <h4>The Motorcycle Course Route</h4>
-                        <p>asd</p>
+                        <p>Now this was the route I personally took (shoutout to <a href="https://www.awesomecycles.com/">Awesome Cycles</a>,
+                            great course with outstanding instructors and classmates). The reason I took this route is that, in my opinion, this is the
+                            quickest, most direct, and best-for-learning way to get your motorcycle license hands down. All this route involves is:
+                        </p>
+                        <ol>
+                            <li>Taking a <b>DPS-approved</b> Motorcycle Safety Course, the most common (and thorough) of which I think you'll find
+                                is the Motorcycle Safety Foundation's (MSF) Basic Rider Course. There are a few classroom hours, but about 75% or more
+                                of the course is outside on a bike.
+                            </li>
+                            <li>Passing the written test (nobody, and I mean nobody, fails this) and the riding test (pay attention in class and you'll be
+                                perfectly fine; seriously, have fun with it as it's yet another opportunity to ride until you get your license soon after) 
+                                at the end of the two or three day long class.
+                            </li>
+                            <li>Get your certificate of completion, take that sucker to the DMV, take a vision test, and walk out with your new Class M license.</li>
+                        </ol>
+                        <p></p>
                     </div>
+                    <br/>
+                        <p>So as I said above, my personal recommendation for the sake of your time, knowledge, and skill would be the latter route, but so long as
+                            the end result is you riding and staying safe out there so you can keep throwing out those two finger salutes, I'm a happy rider.
+                        </p>
+                    <br/>
+                    <br/>
                     <div className="container my-2">
                         <h3>...or your INTERNATIONAL motorcycle license</h3>
                         <p>insert step by step here (cost, courses, classes, process, etc.)</p>
