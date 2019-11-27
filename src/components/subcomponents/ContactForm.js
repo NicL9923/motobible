@@ -24,9 +24,6 @@ class ContactForm extends React.Component {
         this.setState({ formWasSubmitted: true });
 
         const db = firebase.firestore();
-        db.settings({
-            timestampsInSnapshots: true
-          });
 
         //Send info to DB
         db.collection("messages").add({

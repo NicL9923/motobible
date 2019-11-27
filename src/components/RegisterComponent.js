@@ -14,6 +14,10 @@ class RegisterComponent extends React.Component {
             registered: false
         }
     }
+
+    handleChange = e => {
+        this.setState({ [e.target.name]: e.target.value });
+    }
     
     register = e => {
         e.preventDefault();
@@ -51,11 +55,11 @@ class RegisterComponent extends React.Component {
                 <form name="registerForm" onSubmit={this.register}>
                     <div className="form-group">
                         <h4>Email:</h4>
-                        <input className="form-control" type="email" name="email" placeholder="Email" value={this.state.email} required/>
+                        <input className="form-control" type="email" name="email" placeholder="Email" onChange={this.handleChange} value={this.state.email} required/>
                     </div>
                     <div className="form-group">
                         <h4>Password:</h4>
-                        <input className="form-control" type="password" name="password" placeholder="Password" value={this.state.password} required/>
+                        <input className="form-control" type="password" name="password" placeholder="Password" onChange={this.handleChange} value={this.state.password} required/>
                     </div>
                         <div className="form-group">
                         <input className="btn btn-primary" type="submit" value="Register"/>

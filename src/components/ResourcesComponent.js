@@ -30,7 +30,15 @@ class ResourcesComponent extends React.Component {
                 <div className="container card card-body my-4">
                     <div className="container my-2">
                         <h3>How to get YOUR Class M license</h3>
-                        <p>insert step by step here (cost, courses, classes, process, etc.)</p>
+                        <p>To start, there are a couple ways to go about getting
+                            that coveted 'M' on your driver's license.
+                        </p>
+
+                        <h4>The DPS Test Route</h4>
+                        <p>asd</p>
+
+                        <h4>The Motorcycle Course Route</h4>
+                        <p>asd</p>
                     </div>
                     <div className="container my-2">
                         <h3>...or your INTERNATIONAL motorcycle license</h3>
