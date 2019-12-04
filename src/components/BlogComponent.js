@@ -4,7 +4,7 @@ class BlogComponent extends React.Component {
     render() {
         return (
             <div>
-                placeholder
+                BLOG COMING VERY SOON AS OF 11/29/2019
             </div>
         );
     }

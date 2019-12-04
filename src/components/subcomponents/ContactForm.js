@@ -37,9 +37,6 @@ class ContactForm extends React.Component {
         .catch(error => {
             console.error("Error adding document: ", error);
         });
-
-        this.setState({ formWasSubmitted: true });
-
     }
 
     render() {

@@ -54,7 +54,7 @@ class App extends React.Component {
 
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
           <a className="navbar-brand" href="/" target="_blank">
-            <img src={logo} width="30" height="30" alt="TheMotoBible.com"/>
+            <img src={logo} width="45" height="45" alt="TheMotoBible.com"/>
           </a>
           <Link to="/" className="navbar-brand">Home</Link>
 

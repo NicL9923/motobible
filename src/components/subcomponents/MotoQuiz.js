@@ -4,7 +4,7 @@ class MotoQuiz extends React.Component {
     render() {
         return(
             <div>
-                asd
+                MOTO QUIZ GAME: COMING SOON
             </div>
         );
     }
