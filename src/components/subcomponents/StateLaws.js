@@ -6,27 +6,28 @@ class StateLaws extends React.Component {
         super(props);
         this.state = {
             location: null,
-            helmetReq: null,
-            lanesplit: null
+            helmetReq: "N/A",
+            gearReq: "N/A",
+            lanesplit: "N/A"
         }
     }
     
-    //Figure out what laws we're universally pulling
-    //so we can organize how to pull it and display it uniformly
+    //How to get select value
 
     pullStateInfo = e => {
         this.setState({ location: e.target.value });
 
         const db = firebase.firestore();
-        let docRef = db.collection("statelaws").doc(this.state.location);
+        let docRef = db.collection("statelaws").doc(e.target.value); //this.state.location
 
         docRef.get().then(doc => {
             if (doc.exists) {
                 let stuff = doc.data();
-                this.setState({ helmetReq: stuff.helmetReq, lanesplit: stuff.lanesplit });
+                this.setState({ helmetReq: stuff.helmetReq, gearReq: stuff.gearReq, lanesplit: stuff.lanesplit });
             }
             else {
                 console.log("Document not found!");
+                this.setState({ helmetReq: "N/A", gearReq: "N/A", lanesplit: "N/A"});
             }
         });
     }
@@ -34,8 +35,8 @@ class StateLaws extends React.Component {
     render() {
         return(
         <div className="container-fluid card card-body my-4">
-        <h3>Laws: I live in
-        <select name="places" value={this.state.location} onChange={this.pullStateInfo}>
+        <h3><b>Laws: </b>I live in 
+        <select name="location" value={this.state.location} onChange={this.pullStateInfo}>
                 <option hidden disabled selected value></option>
             <optgroup label="United States">
                 <option value="alabama">Alabama</option>
@@ -96,7 +97,11 @@ class StateLaws extends React.Component {
             </optgroup>
             </select>
             .</h3>
-        <p>*(Helmet, lanesplitting, etc. for that state/country)</p>
+            {this.state.location && <div>
+        <p><b>Helmet Required:</b> {this.state.helmetReq}</p>
+        <p><b>Gear Required:</b> {this.state.gearReq}</p>
+        <p><b>Lanesplitting:</b> {this.state.lanesplit}</p>
+            </div>}
     </div>
     );
     }

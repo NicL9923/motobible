@@ -13,7 +13,7 @@ class RandomQuote extends React.Component {
     componentDidMount() {
         const db = firebase.firestore();
 
-        let randNumIndex = toString(Math.floor(Math.random() * 100));
+        let randNumIndex = Math.floor(Math.random() * 50).toString();
         let docRef = db.collection("motofacts").doc(randNumIndex);
 
         //Pull a random fact/statistic and its source from the "motofacts" collection
