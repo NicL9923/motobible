@@ -37,7 +37,7 @@ class ContactForm extends React.Component {
             email: this.state.email,
             subject: this.state.subject,
             message: this.state.message,
-            created: firebase.firestore.FieldValue.serverTimestamp()
+            created: firebase.firestore.Timestamp.now()
         })
         .then(docRef => {
             console.log("Document written with ID: ", docRef.id);

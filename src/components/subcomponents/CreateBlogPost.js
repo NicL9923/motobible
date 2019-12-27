@@ -40,7 +40,7 @@ class CreateBlogPost extends React.Component {
             title: this.state.title,
             author: this.state.author,
             body: this.state.body,
-            created: firebase.firestore.FieldValue.serverTimestamp()
+            created: firebase.firestore.Timestamp.now()
         }).then(docRef => {
             alert("Blog post created successfully!");
             this.setState({ title: "", body: "" });

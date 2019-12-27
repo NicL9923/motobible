@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import fire from "./firebase";
 import logo from "./resources/motoBibleLogo.png";
 
@@ -94,7 +94,7 @@ class App extends React.Component {
         <Switch>
           <Route path="/" exact component={HomeComponent}/>
           
-          <Route path="/blog" component={BlogComponent}/>
+          <Route path="/blog" exact component={BlogComponent}/>
           <Route path="/blog/:year/:month/:day" component={BlogPost}/>
 
           <Route path="/chatroom" component={ChatroomComponent}/>
