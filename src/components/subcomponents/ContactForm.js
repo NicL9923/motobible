@@ -8,6 +8,7 @@ class ContactForm extends React.Component {
         this.state = {
             name: "",
             email: "",
+            subject: "",
             message: "",
             formWasSubmitted: false
         }
@@ -25,11 +26,18 @@ class ContactForm extends React.Component {
 
         const db = firebase.firestore();
 
+        //My odd attempt at handling the off chance of a duplicate subject
+        if (db.collection("messages").doc(this.state.subject)) {
+            this.setState({ subject: this.state.subject + " Duplicate by " + this.state.name });
+        }
+
         //Send info to DB
-        db.collection("messages").add({
+        db.collection("messages").doc(this.state.subject).set({
             name: this.state.name,
             email: this.state.email,
-            message: this.state.message
+            subject: this.state.subject,
+            message: this.state.message,
+            created: firebase.firestore.FieldValue.serverTimestamp()
         })
         .then(docRef => {
             console.log("Document written with ID: ", docRef.id);
@@ -37,11 +45,13 @@ class ContactForm extends React.Component {
         .catch(error => {
             console.error("Error adding document: ", error);
         });
+
+        this.setState({ name: "", email: "", subject: "", message: ""});
     }
 
     render() {
         return(
-            <div className="container card card-body my-5">
+            <div className="card card-body my-5">
                     <h3>Contact Us</h3>
                     <form name="contactUsForm" onSubmit={this.sendData}>
                         <div className="form-group">
@@ -52,6 +62,11 @@ class ContactForm extends React.Component {
                         <div className="form-group">
                             <h4>Email:</h4>
                             <input className="form-control" type="email"value={this.state.email} onChange={this.inputChange} placeholder="Email" name="email" required/>
+                        </div>
+
+                        <div className="form-group">
+                            <h4>Subject:</h4>
+                            <input className="form-control" type="text" value={this.state.subject} onChange={this.inputChange} placeholder="Subject" name="subject" required/>
                         </div>
 
                         <div className="form-group">

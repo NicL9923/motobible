@@ -54,7 +54,8 @@ class FooterComponent extends React.Component {
                 <h5>About Us</h5>
                 <p>The Motorcyclist's Bible, or Moto Bible, was made
                   to bring together riders from all over. We aim to keep you
-                  connected to other riders and sharp on your riding skills and knowledge.
+                  connected to other riders and sharp on your riding skills and knowledge. 
+                  If you love motorcycles, you have a home here!
                 </p>
               </div>
               <div className='col text-center'>

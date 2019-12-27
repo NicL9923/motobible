@@ -12,18 +12,12 @@ class DonateComponent extends React.Component {
                     enjoy our content and what we do here, every little bit is appreciated
                     and helps keep us up and running, and producing new content.
                 </p>
-                <p>Listed below are ways you can help out, ranging from a straightforward donation to affiliate links that may catch your interest:</p>
+                <p>Listed below are ways you can help out, ranging from a straightforward donation to affiliate links that may catch your interest. Thanks again!</p>
             </div>
 
             <div className="container">
                 <h4>Donate</h4>
                 <form>Insert donation form here</form>
-            </div>
-
-            <div className="container">
-                <h4>Patreon</h4>
-                <a href="https://www.patreon.com/themotobible">Support Us on Patreon</a>
-                <p>Description of Patreon and ours in particular</p>
             </div>
 
             <div className="container">

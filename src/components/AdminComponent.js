@@ -3,6 +3,7 @@ import fire from '../firebase';
 // eslint-disable-next-line
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 import CreateBlogPost from './subcomponents/CreateBlogPost';
+import ManageMessages from './subcomponents/ManageMessages';
 
 class AdminComponent extends React.Component {
     constructor(props) {
@@ -44,11 +45,12 @@ class AdminComponent extends React.Component {
                    <CreateBlogPost/>
 
                 <div className="card card-body my-4">
-                    <h3>Manage leaderboards</h3>
+                    <h3>Manage Leaderboards</h3>
+                    <p>placeholder</p>
                 </div>
 
                 <div className="card card-body my-4">
-                    <h3>Manage contact messages (display them in chronological order from DB here)</h3>
+                    <ManageMessages/>
                 </div>
             </div>) : 
                 (<div className="alert alert-danger" role="alert">You do not have access to this page.</div>)}

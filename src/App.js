@@ -6,6 +6,7 @@ import logo from "./resources/motoBibleLogo.png";
 import HomeComponent from "./components/HomeComponent";
 import FooterComponent from "./components/subcomponents/FooterComponent";
 import BlogComponent from "./components/BlogComponent";
+import BlogPost from "./components/subcomponents/BlogPost";
 import ChatroomComponent from "./components/ChatroomComponent";
 import MinigamesComponent from "./components/MinigamesComponent";
 import ResourcesComponent from "./components/ResourcesComponent";
@@ -15,6 +16,8 @@ import AdminComponent from "./components/AdminComponent";
 import LogoutComponent from "./components/LogoutComponent";
 import DonateComponent from "./components/DonateComponent";
 import StoreComponent from "./components/StoreComponent";
+import PageNotFound from "./components/subcomponents/PageNotFound";
+
 
 class App extends React.Component {
   constructor(props) {
@@ -88,20 +91,26 @@ class App extends React.Component {
             </div>
           </div>
         </nav>
-        
-        <Route path="/" exact component={HomeComponent}/>
-        <Route path="/blog" component={BlogComponent}/>
-        <Route path="/chatroom/" component={ChatroomComponent}/>
-        <Route path="/minigames/" component={MinigamesComponent}/>
-        <Route path="/resources" component={ResourcesComponent}/>
-        <Route path="/donate" component={DonateComponent}/>
-        <Route path="/store" component={StoreComponent}/>
+        <Switch>
+          <Route path="/" exact component={HomeComponent}/>
+          
+          <Route path="/blog" component={BlogComponent}/>
+          <Route path="/blog/:year/:month/:day" component={BlogPost}/>
 
-        <Route path="/login" component={LoginComponent}/>
-        <Route path="/register" component={RegisterComponent}/>
-        <Route path="/logout" component={LogoutComponent}/>
+          <Route path="/chatroom" component={ChatroomComponent}/>
+          <Route path="/minigames" component={MinigamesComponent}/>
+          <Route path="/resources" component={ResourcesComponent}/>
+          <Route path="/donate" component={DonateComponent}/>
+          <Route path="/store" component={StoreComponent}/>
 
-        <Route path="/admin" component={AdminComponent}/>
+          <Route path="/login" component={LoginComponent}/>
+          <Route path="/register" component={RegisterComponent}/>
+          <Route path="/logout" component={LogoutComponent}/>
+
+          <Route path="/admin" component={AdminComponent}/>
+
+          <Route component={PageNotFound}/>
+        </Switch>
 
         <FooterComponent/>
       </div>

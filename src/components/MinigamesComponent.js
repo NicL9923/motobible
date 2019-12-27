@@ -6,8 +6,8 @@ class MinigamesComponent extends React.Component {
         return(
             <div>
                 <MotoQuiz/>
-                <div>TODO: Some gnarly minigames about motorcycle safety from quizzes(?) to identifying hazards</div>
-                <div>Maybe some leaderboards and user account integration??</div>
+                <div>TODO: More minigames, same cartoony style as home page gif about identifying/avoiding hazards</div>
+                <div>TODO: leaderboards (only for other games, not quiz)</div>
             </div>
         );
     }
