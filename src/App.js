@@ -17,6 +17,8 @@ import LogoutComponent from "./components/LogoutComponent";
 import DonateComponent from "./components/DonateComponent";
 import StoreComponent from "./components/StoreComponent";
 import PageNotFound from "./components/subcomponents/PageNotFound";
+import TermsComponent from "./components/TermsComponent";
+import PrivacyComponent from "./components/PrivacyComponent";
 
 
 class App extends React.Component {
@@ -83,12 +85,12 @@ class App extends React.Component {
                 <Link to="/store" className="nav-link">Store</Link>
               </li>
             </ul>
-            <div className="navbar-nav">
+            <ul className="navbar-nav justify-content-end">
               {/*If the user is signed in, display Logout, otherwise Login/Register*/}
-              {this.state.user ? (<Link to="/logout" className="nav-link my-auto">Logout</Link>) : (<div className="row"><Link to="/login" className="nav-link my-auto">Login</Link>
-                                        <Link to="/register" className="nav-link my-auto">Register</Link></div>)}
-              <Link to="/donate" className="nav-link mx-2"><button className="btn btn-info">Support Us</button></Link>
-            </div>
+              {this.state.user ? (<Link to="/logout" className="nav-link my-auto">Logout</Link>) : (<><li className="nav-item my-auto"><Link to="/login" className="nav-link">Login</Link></li>
+                                        <li className="nav-item my-auto"><Link to="/register" className="nav-link">Register</Link></li></>)}
+              <li className="nav-item"><Link to="/donate" className="nav-link"><button className="btn btn-info">Support Us</button></Link></li>
+            </ul>
           </div>
         </nav>
         <Switch>
@@ -108,6 +110,8 @@ class App extends React.Component {
           <Route path="/logout" component={LogoutComponent}/>
 
           <Route path="/admin" component={AdminComponent}/>
+          <Route path="/terms" component={TermsComponent}/>
+          <Route path="/privacy" component={PrivacyComponent}/>
 
           <Route component={PageNotFound}/>
         </Switch>

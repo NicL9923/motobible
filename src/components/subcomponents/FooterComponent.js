@@ -48,6 +48,7 @@ class FooterComponent extends React.Component {
                   <input className="btn btn-primary mt-1" type="submit" value="Subscribe"/></form>
                   <br/>
                   <p>Based in Houston, TX</p>
+                  <p><a href="/terms">Terms</a> | <a href="/privacy">Privacy</a></p>
               </div>
             </div>
               <div className='col text-center'>

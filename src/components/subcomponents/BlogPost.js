@@ -21,7 +21,7 @@ class BlogPost extends React.Component {
     }
 
     fetchPost = () => {
-        //Get the specified post based on the date (*Note: JS Date months go from 0-11)
+        //Gets the specified post based on the date (*Note: JS Date months go from 0-11)
         const db = firebase.firestore();
         let timestamp = new Date(this.props.match.params.year, this.props.match.params.month - 1, this.props.match.params.day, 0, 0, 0); 
         let timestamp2 = new Date(this.props.match.params.year, this.props.match.params.month - 1, this.props.match.params.day, 23, 59, 59);
@@ -37,14 +37,23 @@ class BlogPost extends React.Component {
         });
     }
 
+    //If having issue in future, issue may be result of preceding '0' on day/month
+    convertTimestampToDate = timestamp => {
+        let timePosted = timestamp.toDate().toString().substr(4, 17);
+
+        return(
+            <>{timePosted}</>
+        );
+    }
+
     render() {
         return ( 
             <div className="card card-body my-2">
                 {this.state.postExists ? (<div>
                     <h3>{this.state.post.title}</h3>
                     <h5>by {this.state.post.author}</h5>
-                    <h6>{Date(this.state.post.created.seconds)}</h6>
-                    {this.state.post.edited && <h6>Edited: {this.state.post.edited}</h6>}
+                    <h6>{this.convertTimestampToDate(this.state.post.created)}</h6>
+                    {this.state.post.lastEdited && <h6>Edited: {this.convertTimestampToDate(this.state.post.lastEdited)}</h6>}
 
                     <p>{this.state.post.body}</p>
                 </div>) : (<div>

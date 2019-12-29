@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from 'firebase';
 
+//TODO: Break down into further components cause this bad boy right here is a monstrosity
 class CreateBlogPost extends React.Component {
     constructor(props) {
         super(props);
@@ -68,11 +69,28 @@ class CreateBlogPost extends React.Component {
     }
 
     convertTimestampToDate = timestamp => {
-        let timePosted = timestamp.toDate().toString();
+        let timePosted = timestamp.toDate().toString().substr(4, 17);
 
         return(
             <p>{timePosted}</p>
         );
+    }
+
+    generateLinkToPost = timestamp => {
+        let timePosted = timestamp.toDate();
+        let linkString = "/blog/";
+        let year = timePosted.getFullYear();
+        let month = timePosted.getMonth() + 1;
+        let day = timePosted.getDate();
+
+        if (month.length < 2)
+            month = "0" + month;
+        if (day.length < 2)
+            day = "0" + day;
+        
+        linkString = linkString + year + "/" + month + "/" + day;
+
+        return linkString;
     }
 
     //Below (startEdit/editBlogPost) is my currently horribly rigged way to edit a post (delete old and create entirely new one)
@@ -125,8 +143,6 @@ class CreateBlogPost extends React.Component {
         if (!window.confirm("Delete " + postToDelete + " post?")) {
             return;
         }
-        
-        //Find way to get post for which delete button is being pressed (replace DOCtoDELETE)
 
         db.collection("blog").doc(postToDelete).delete().then( () => {
             alert("Successfully deleted post!");
@@ -169,7 +185,7 @@ class CreateBlogPost extends React.Component {
                         <ul className="list-group">
                             { this.state.posts.map((post, index) => {
                             return (<li className="list-group-item my-1" key={index}>
-                                    <a href="LINKtoPOST"><h4>{ post.title }</h4></a>
+                                    <a href={this.generateLinkToPost(post.created)}><h4>{ post.title }</h4></a>
                                     <p>by { post.author } on {this.convertTimestampToDate(post.created)}</p>
                                     <button className="btn btn-info mr-1" onClick={e => {this.startEdit(e, post.title, post.author, post.body, post.created)}}>Edit</button>
                                     <button className="btn btn-danger ml-1" onClick={e => {this.deleteBlogPost(e, post.title)}}>Delete</button>

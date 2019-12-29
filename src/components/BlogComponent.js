@@ -28,11 +28,28 @@ class BlogComponent extends React.Component {
     }
     
     convertTimestampToDate = timestamp => {
-        let timePosted = timestamp.toDate().toString();
+        let timePosted = timestamp.toDate().toString().substr(4, 17);
 
         return(
             <p>{timePosted}</p>
         );
+    }
+
+    generateLinkToPost = timestamp => {
+        let timePosted = timestamp.toDate();
+        let linkString = "/blog/";
+        let year = timePosted.getFullYear();
+        let month = timePosted.getMonth() + 1;
+        let day = timePosted.getDate();
+
+        if (month.length < 2)
+            month = "0" + month;
+        if (day.length < 2)
+            day = "0" + day;
+        
+        linkString = linkString + year + "/" + month + "/" + day;
+
+        return linkString;
     }
 
     render() {
@@ -46,9 +63,10 @@ class BlogComponent extends React.Component {
                     <div className="card-body overflow-auto" style={{maxHeight: 300}}>
                         { this.state.posts.map((post, index) => {
                             return (<div className="card card-body my-3" key={index}>
-                                    <a href="LINKtoPOST"><h3>{ post.title }</h3></a>
-                                    <p>by { post.author } on {this.convertTimestampToDate(post.created)}</p>
-                                    <p>{ post.body }</p>
+                                    <a href={this.generateLinkToPost(post.created)}><h3>{ post.title }</h3></a>
+                                    <p>by { post.author }</p>
+                                    <p>{this.convertTimestampToDate(post.created)}</p>
+                                    <p className="overflow-hidden" style={{maxHeight: "100px"}}>{ post.body }</p>
                                 </div>)
                         })}
                     </div>
@@ -63,5 +81,3 @@ class BlogComponent extends React.Component {
 };
 
 export default BlogComponent;
-
-//Use each parameter to query down to one post

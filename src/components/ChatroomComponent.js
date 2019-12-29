@@ -11,8 +11,13 @@ class ChatroomComponent extends React.Component {
                 shard="https://disweb.dashflo.net"
                 
                 height="70vh"
-                className="container-fluid"
+                className="container-fluid my-1"
                 />
+
+                <div className="card card-body my-1">
+                    <h5>Having issues with the chatroom?</h5>
+                    <p>Join us on our <a href="https://discord.gg/afe8ZMN">Discord</a></p>
+                </div>
             </div>
         );
     }
