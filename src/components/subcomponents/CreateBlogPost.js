@@ -72,7 +72,7 @@ class CreateBlogPost extends React.Component {
         let timePosted = timestamp.toDate().toString().substr(4, 17);
 
         return(
-            <p>{timePosted}</p>
+            <>{timePosted}</>
         );
     }
 

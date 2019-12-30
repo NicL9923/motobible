@@ -1,5 +1,7 @@
 import React from 'react';
 import firebase from 'firebase';
+import './stylesheets/BlogComponent.css';
+import BlogCalendar from "./subcomponents/BlogCalendar";
 
 class BlogComponent extends React.Component {
     constructor(props) {
@@ -31,7 +33,7 @@ class BlogComponent extends React.Component {
         let timePosted = timestamp.toDate().toString().substr(4, 17);
 
         return(
-            <p>{timePosted}</p>
+            <>{timePosted}</>
         );
     }
 
@@ -66,15 +68,14 @@ class BlogComponent extends React.Component {
                                     <a href={this.generateLinkToPost(post.created)}><h3>{ post.title }</h3></a>
                                     <p>by { post.author }</p>
                                     <p>{this.convertTimestampToDate(post.created)}</p>
-                                    <p className="overflow-hidden" style={{maxHeight: "100px"}}>{ post.body }</p>
+                                    <p className="overflow-hidden" style={{maxHeight: "50px"}}>{ post.body }</p>
+                                    <p class="read-more"><a href={this.generateLinkToPost(post.created)} class="btn btn-primary">Read More</a></p>
                                 </div>)
                         })}
                     </div>
                 </div>
 
-                <div className="card my-3">
-                    <p>Search by date, maybe a cool looking calendar UI?, or just boring click year/month/week</p>
-                </div>
+                <BlogCalendar/>
             </div>
         );
     }
