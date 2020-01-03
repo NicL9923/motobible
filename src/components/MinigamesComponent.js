@@ -6,8 +6,11 @@ class MinigamesComponent extends React.Component {
         return(
             <div>
                 <MotoQuiz/>
-                <div>TODO: More minigames, same cartoony style as home page gif about identifying/avoiding hazards</div>
-                <div>TODO: leaderboards (only for other games, not quiz)</div>
+                <div className="card card-body my-2">
+                    <h3>Coming Soon:</h3>
+                    <p>-More minigames</p>
+                    <p>-Leaderboards (for games other than quiz; anonymous or with your username/email)</p>
+                </div>
             </div>
         );
     }

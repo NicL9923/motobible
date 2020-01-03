@@ -48,7 +48,7 @@ class BlogPost extends React.Component {
 
     render() {
         return ( 
-            <div className="card card-body my-2">
+            <article className="card card-body my-2">
                 {this.state.postExists ? (<div>
                     <h3>{this.state.post.title}</h3>
                     <h5>by {this.state.post.author}</h5>
@@ -60,7 +60,7 @@ class BlogPost extends React.Component {
                     <h3>Oops! Likes like there wasn't a post published on</h3>
                     <h3>{this.props.match.params.month}/{this.props.match.params.day}/{this.props.match.params.year}</h3>
                 </div>)}
-            </div>
+            </article>
         );
     }
 };

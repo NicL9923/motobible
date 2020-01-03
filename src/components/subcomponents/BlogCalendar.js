@@ -14,8 +14,9 @@ class BlogCalendar extends React.Component {
 
     render() {
         return(
-            <div className="card my-3">
-                <p>Search by date, maybe a cool looking calendar UI?, or just boring click year/month/week</p>
+            <div className="card card-body my-3">
+                <h3>Blog Calendar</h3>
+                <p>Coming Soon: A calendar UI to find a blog post by date!</p>
             </div>
         );
     }

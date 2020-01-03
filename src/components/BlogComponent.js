@@ -64,13 +64,13 @@ class BlogComponent extends React.Component {
                     </div>
                     <div className="card-body overflow-auto" style={{maxHeight: 300}}>
                         { this.state.posts.map((post, index) => {
-                            return (<div className="card card-body my-3" key={index}>
+                            return (<article className="card card-body my-3" key={index}>
                                     <a href={this.generateLinkToPost(post.created)}><h3>{ post.title }</h3></a>
                                     <p>by { post.author }</p>
                                     <p>{this.convertTimestampToDate(post.created)}</p>
                                     <p className="overflow-hidden" style={{maxHeight: "50px"}}>{ post.body }</p>
                                     <p class="read-more"><a href={this.generateLinkToPost(post.created)} class="btn btn-primary">Read More</a></p>
-                                </div>)
+                                </article>)
                         })}
                     </div>
                 </div>

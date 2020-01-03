@@ -62,7 +62,7 @@ class FooterComponent extends React.Component {
               <div className='col text-center'>
                 <h5>Social Media</h5>
                 <div className="row mx-auto">
-                  <SocialIcon className="img-fluid mx-auto" url="https://twitter.com/BibleMoto"/>
+                  <SocialIcon className="img-fluid mx-auto" url="https://twitter.com/MotoBible"/>
                   <SocialIcon className="img-fluid mx-auto" url="https://www.instagram.com/motorcyclistsbible/" bgColor="#833ab4" fgColor="#e1306c"/>
                   <SocialIcon className="img-fluid mx-auto" url="https://www.youtube.com/channel/UCavSc27ZHAqRpMc4C-BGsbw"/>
                 </div>
