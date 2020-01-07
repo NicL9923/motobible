@@ -54,6 +54,12 @@ class BlogComponent extends React.Component {
         return linkString;
     }
 
+    show5More = e => {
+        e.preventDefault();
+        this.setState({ posts: [], numPostsShown: this.state.numPostsShown + 5 });
+        this.fetchBlogPosts();
+    }
+
     render() {
         return (
             <div>
@@ -64,7 +70,7 @@ class BlogComponent extends React.Component {
                     </div>
                     <div className="card-body overflow-auto" style={{maxHeight: 300}}>
                         { this.state.posts.map((post, index) => {
-                            return (<article className="card card-body my-3" key={index}>
+                            return (<article className="card card-body my-2" key={index}>
                                     <a href={this.generateLinkToPost(post.created)}><h3>{ post.title }</h3></a>
                                     <p>by { post.author }</p>
                                     <p>{this.convertTimestampToDate(post.created)}</p>
@@ -72,6 +78,7 @@ class BlogComponent extends React.Component {
                                     <p class="read-more"><a href={this.generateLinkToPost(post.created)} class="btn btn-primary">Read More</a></p>
                                 </article>)
                         })}
+                        <button className="btn btn-primary mx-auto mb-2" onClick={this.show5More}>Show 5 More</button>
                     </div>
                 </div>
 

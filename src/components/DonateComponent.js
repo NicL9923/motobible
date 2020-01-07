@@ -15,17 +15,36 @@ class DonateComponent extends React.Component {
                 <p>Listed below are ways you can help out, ranging from a straightforward donation to affiliate links that may catch your interest. Thanks again!</p>
             </div>
 
-            <div className="container">
-                <h4>Donate</h4>
-                <form>Insert donation form here</form>
+            <div className="container my-2">
+                <h3>Donate</h3>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_donations" />
+                    <input type="hidden" name="business" value="GXMRWU3H4MPLG" />
+                    <input type="hidden" name="currency_code" value="USD" />
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                </form>
             </div>
 
-            <div className="container">
-                <h4>Affiliate Links</h4>
+            <div className="container my-2">
+                <h3>Affiliate Links</h3>
                 <p><a href="https://mbsy.co/DGCz2">M1 Finance: </a>My personal investment/stock broker. Outstanding for anyone from beginners to experts, 
                 I find this broker to be the most user-friendly and accessible.</p>
-                {/*<p><a href="">Revzilla: </a>This is my preferred shop for anything motorcycles. It's got great items, deals, and immensely useful videos 
-                on each product. Highly recommended.</p>*/}
+                <div class="alignleft">
+                    <script type="text/javascript">
+                        amzn_assoc_ad_type = "banner";
+                        amzn_assoc_marketplace = "amazon";
+                        amzn_assoc_region = "US";
+                        amzn_assoc_placement = "assoc_banner_placement_default";
+                        amzn_assoc_campaigns = "motorcycleatv";
+                        amzn_assoc_banner_type = "category";
+                        amzn_assoc_isresponsive = "true";
+                        amzn_assoc_banner_id = "1GTBWXZ6AWK39XVHDN82";
+                        amzn_assoc_tracking_id = "motobible-20";
+                        amzn_assoc_linkid = "c3d9747c703dd8a480e4bdfc2c25bf61";
+                    </script>
+                    <script src="//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1"></script>
+                </div>
 
             </div>
         </div>
