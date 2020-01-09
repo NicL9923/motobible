@@ -9,7 +9,12 @@
 }
 
 .tileHasPost {
-    color: cyan;
+  background-color: #007bff !important;
+}
+
+.tileHasPost:hover {
+  color: white;
+  background-color: #3794f7 !important;
 }
 
 /* React-Calendar default stylesheet if ever needed in the future

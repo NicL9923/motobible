@@ -49,7 +49,7 @@ class BlogCalendar extends React.Component {
 
         for (let i = 0; i < this.state.postDates.length; i++) {
             if (date.getTime() === this.state.postDates[i].getTime()) {
-                return "tileHasPost";
+                return "tileHasPost tileHasPost:hover";
             }
         }
     }
