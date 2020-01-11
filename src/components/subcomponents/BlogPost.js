@@ -7,13 +7,11 @@ class BlogPost extends React.Component {
         super(props);
         this.state = {
             post: {},
-            title: "",
-            author: "",
-            created: "",
+            imgURL: "",
             edited: undefined,
-            body: "",
             postExists: false
         }
+        this.imgRef = firebase.storage().ref();
     }
 
     componentDidMount() {
@@ -33,6 +31,7 @@ class BlogPost extends React.Component {
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data());
                 this.setState({ post: doc.data(), postExists: true });
+                this.getImageURL();
             });
         });
     }
@@ -46,11 +45,18 @@ class BlogPost extends React.Component {
         );
     }
 
+    getImageURL = e => {
+        this.imgRef.child(`blogImages/${this.state.post.image}`).getDownloadURL().then(url => {
+            this.setState({ imgURL: url });
+        });
+    }
+
     render() {
         return ( 
             <article className="card card-body my-2">
                 {this.state.postExists ? (<div>
                     <h3>{this.state.post.title}</h3>
+                    {this.state.post.image && <img src={this.state.imgURL} className="img-fluid" alt="Cover img"/>}
                     <h5>by {this.state.post.author}</h5>
                     <h6>{this.convertTimestampToDate(this.state.post.created)}</h6>
                     {this.state.post.lastEdited && <h6>Edited: {this.convertTimestampToDate(this.state.post.lastEdited)}</h6>}

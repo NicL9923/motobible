@@ -34,8 +34,8 @@ class RandomQuote extends React.Component {
             <h3 className="card-header">Moto Fact of the Day</h3>
             <div className="card-body">
                 <blockquote className="blockquote text-center">
-                    <p class="mb-0">{this.state.randomFact}</p>
-                    <footer class="blockquote-footer">Courtesy of <cite title="Source Title">{this.state.source}</cite></footer>
+                    <p className="mb-0">{this.state.randomFact}</p>
+                    <footer className="blockquote-footer">Courtesy of <cite title="Source Title">{this.state.source}</cite></footer>
                 </blockquote>
             </div>
         </div>

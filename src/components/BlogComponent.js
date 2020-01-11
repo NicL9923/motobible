@@ -66,7 +66,7 @@ class BlogComponent extends React.Component {
                 <div className="card my-3">
                     <div className="card-header">
                         <h3 className="card-title">The Moto Blog</h3>
-                        <h4 class="card-subtitle text-muted">Our Latest Posts</h4>
+                        <h4 className="card-subtitle text-muted">Our Latest Posts</h4>
                     </div>
                     <div className="card-body overflow-auto" style={{maxHeight: 300}}>
                         { this.state.posts.map((post, index) => {
@@ -75,7 +75,7 @@ class BlogComponent extends React.Component {
                                     <p>by { post.author }</p>
                                     <p>{this.convertTimestampToDate(post.created)}</p>
                                     <p className="overflow-hidden" style={{maxHeight: "50px"}}>{ post.body }</p>
-                                    <p class="read-more"><a href={this.generateLinkToPost(post.created)} class="btn btn-info">Read More</a></p>
+                                    <p className="read-more"><a href={this.generateLinkToPost(post.created)} className="btn btn-info">Read More</a></p>
                                 </article>)
                         })}
                         <div className="text-center"><button className="btn btn-primary mx-auto mb-2" onClick={this.show5More}>Show 5 More</button></div>

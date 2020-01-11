@@ -7,11 +7,13 @@ class CreateBlogPost extends React.Component {
         super(props);
         this.state = {
             title: "",
+            image: "",
             author: "",
             body: "",
             posts: [],
             editingPost: false,
             editingTitle: "",
+            editingImage: "",
             editingAuthor: "",
             editingBody: "",
             editingCreated: "",
@@ -39,6 +41,7 @@ class CreateBlogPost extends React.Component {
         //Send info to DB
         db.collection("blog").doc(this.state.title).set({
             title: this.state.title,
+            image: this.state.image,
             author: this.state.author,
             body: this.state.body,
             created: firebase.firestore.Timestamp.now()
@@ -96,9 +99,9 @@ class CreateBlogPost extends React.Component {
     //Below (startEdit/editBlogPost) is my currently horribly rigged way to edit a post (delete old and create entirely new one)
     //but it's the only solution i could think of that worked with firebase and its not a commonly used
     //feature so I think it's fine (for now)
-    startEdit = (e, postTitle, postAuthor, postBody, postCreated) => {
+    startEdit = (e, postTitle, postImage, postAuthor, postBody, postCreated) => {
         e.preventDefault();
-        this.setState({ editingPost: true, editingTitle: postTitle, oldTitle: postTitle, editingAuthor: postAuthor, editingBody: postBody, editingCreated: postCreated });
+        this.setState({ editingPost: true, editingTitle: postTitle, oldTitle: postTitle, editingImage: postImage, editingAuthor: postAuthor, editingBody: postBody, editingCreated: postCreated });
     }
     
     editBlogPost = e => {
@@ -121,6 +124,7 @@ class CreateBlogPost extends React.Component {
         
         db.collection("blog").doc(this.state.editingTitle).set({
             title: this.state.editingTitle,
+            image: this.state.editingImage,
             author: this.state.editingAuthor,
             body: this.state.editingBody,
             created: this.state.editingCreated,
@@ -167,6 +171,10 @@ class CreateBlogPost extends React.Component {
                             <input className="form-control" type="text" name="title" placeholder="Title" onChange={this.handleChange} value={this.state.title}/>
                         </div>
                         <div className="form-group">
+                            <h4>Image Name</h4>
+                            <input className="form-control" type="text" name="image" placeholder="Image Name" onChange={this.handleChange} value={this.state.image}/>
+                        </div>
+                        <div className="form-group">
                             <h4>Author</h4>
                             <input className="form-control" type="text" name="author" placeholder="Author" onChange={this.handleChange} value={this.state.author}/>
                         </div>
@@ -187,7 +195,7 @@ class CreateBlogPost extends React.Component {
                             return (<li className="list-group-item my-1" key={index}>
                                     <a href={this.generateLinkToPost(post.created)}><h4>{ post.title }</h4></a>
                                     <p>by { post.author } on {this.convertTimestampToDate(post.created)}</p>
-                                    <button className="btn btn-info mr-1" onClick={e => {this.startEdit(e, post.title, post.author, post.body, post.created)}}>Edit</button>
+                                    <button className="btn btn-info mr-1" onClick={e => {this.startEdit(e, post.title, post.image, post.author, post.body, post.created)}}>Edit</button>
                                     <button className="btn btn-danger ml-1" onClick={e => {this.deleteBlogPost(e, post.title)}}>Delete</button>
                                 </li>)
                         })}
@@ -199,6 +207,10 @@ class CreateBlogPost extends React.Component {
                             <div className="form-group">
                                 <h4>Title</h4>
                                 <input className="form-control" type="text" name="editingTitle" placeholder="Title" onChange={this.handleChange} value={this.state.editingTitle}/>
+                            </div>
+                            <div className="form-group">
+                                <h4>Image Name</h4>
+                                <input className="form-control" type="text" name="editingImage" placeholder="Image Name" onChange={this.handleChange} value={this.state.editingImage}/>
                             </div>
                             <div className="form-group">
                                 <h4>Body</h4>
