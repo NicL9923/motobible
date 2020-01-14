@@ -83,11 +83,11 @@ class ResourcesComponent extends React.Component {
                             you feel your country should be included and it isn't currently, you can contact me on the home page.
                         </p>
                         <p><b>European Union:</b> <a href="https://europa.eu/youreurope/citizens/vehicles/driving-licence/get-driving-licence/index_en.htm">EU Driving License Info</a></p>
-                        <p><b>Russia:</b> <a href="1">TBD</a></p>
-                        <p><b>Japan:</b> <a href="1">TBD</a></p>
-                        <p><b>Australia:</b> <a href="1">TBD</a></p>
-                        <p><b>Mexico:</b> <a href="1">TBD</a></p>
-                        <p><b>India:</b> <a href="1">TBD</a></p>
+                        <p><b>Russia:</b> <a href="https://en.wikipedia.org/wiki/Driving_licence_in_Russia">Russia Driving License Info</a></p>
+                        <p><b>Japan:</b> <a href="https://www.japanistry.com/getting-a-motorcycle-license-in-japan/">Japan Motorcycle/Driving License Info</a></p>
+                        <p><b>Australia:</b> <a href="https://www.sa.gov.au/topics/driving-and-transport/licences/motorcycle-licences/applying-for-a-motorcycle-licence">Australia Motorcycle License Info</a></p>
+                        <p><b>Mexico:</b> <a href="https://en.wikipedia.org/wiki/Driving_licence_in_Mexico">Mexico Driving License Info</a></p>
+                        <p><b>India:</b> <a href="https://www.bankbazaar.com/driving-licence.html">India Motorcycle/Driving License Info</a></p>
                     </div>
                 </div>
 
