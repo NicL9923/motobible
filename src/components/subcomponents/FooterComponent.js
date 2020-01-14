@@ -22,7 +22,7 @@ class FooterComponent extends React.Component {
 
     //Send info to DB
     //TODO: Database check for email state, if already in, display info alert FOR no duplicates in DB
-    db.collection("newsletter").add({
+    db.collection("newsletter").doc(this.state.email).set({
           email: this.state.email
     })
     .then(docRef => {
