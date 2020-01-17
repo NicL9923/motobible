@@ -64,13 +64,15 @@ class BlogPost extends React.Component {
         return ( 
             <article className="card card-body my-2">
                 {this.state.postExists ? (<div>
-                    <h3>{this.state.post.title}</h3>
-                    {this.state.post.image && <img src={this.state.imgURL} className="img-fluid" alt="Cover img"/>}
+                    {this.state.post.image && <img src={this.state.imgURL} className="img-fluid mx-auto d-block" style={{maxHeight: "50vh"}} alt="Cover img"/>}
+                    <h3><b>{this.state.post.title}</b></h3>
                     <h5>by {this.state.post.author}</h5>
-                    <h6>{this.convertTimestampToDate(this.state.post.created)}</h6>
-                    {this.state.post.lastEdited && <h6>Edited: {this.convertTimestampToDate(this.state.post.lastEdited)}</h6>}
-
+                    <h6 className="text-muted">{this.convertTimestampToDate(this.state.post.created)}</h6>
+                    {this.state.post.lastEdited && <h6 className="text-muted">Edited: {this.convertTimestampToDate(this.state.post.lastEdited)}</h6>} <br/>
                     <p dangerouslySetInnerHTML={this.decodeText(this.state.post.body)}></p>
+                    <br/>
+                    <h6>As always, ride smart brothers and sisters,</h6>
+                    <h6>{this.state.post.author}</h6>
                 </div>) : (<div>
                     <h3>Oops! Likes like there wasn't a post published on</h3>
                     <h3>{this.props.match.params.month}/{this.props.match.params.day}/{this.props.match.params.year}</h3>
