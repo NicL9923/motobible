@@ -51,6 +51,15 @@ class BlogPost extends React.Component {
         });
     }
 
+    //Currently just a method to dangerouslySetInnerHTML
+    //Handles HTML tags (<br>, <b>, etc are main use case)
+    decodeText = postBody => {
+        //Find some way to handle tabs and newlines (\n)
+        return({
+            __html: postBody
+        });
+    }
+
     render() {
         return ( 
             <article className="card card-body my-2">
@@ -61,7 +70,7 @@ class BlogPost extends React.Component {
                     <h6>{this.convertTimestampToDate(this.state.post.created)}</h6>
                     {this.state.post.lastEdited && <h6>Edited: {this.convertTimestampToDate(this.state.post.lastEdited)}</h6>}
 
-                    <p>{this.state.post.body}</p>
+                    <p dangerouslySetInnerHTML={this.decodeText(this.state.post.body)}></p>
                 </div>) : (<div>
                     <h3>Oops! Likes like there wasn't a post published on</h3>
                     <h3>{this.props.match.params.month}/{this.props.match.params.day}/{this.props.match.params.year}</h3>
