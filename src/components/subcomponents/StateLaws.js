@@ -47,6 +47,7 @@ class StateLaws extends React.Component {
                 <option value="colorado">Colorado</option>
                 <option value="connecticut">Connecticut</option>
                 <option value="delaware">Delaware</option>
+                <option value="dc">District of Columbia</option>
                 <option value="florida">Florida</option>
                 <option value="georgia">Georgia</option>
                 <option value="hawaii">Hawaii</option>
@@ -92,8 +93,9 @@ class StateLaws extends React.Component {
             </optgroup>
 
             <optgroup label="International">
-                <option value="uk">United Kingdom</option>
+                <option value="aus">Australia</option>
                 <option value="germany">Germany</option>
+                <option value="uk">United Kingdom</option>
             </optgroup>
             </select>
             .</h3>
