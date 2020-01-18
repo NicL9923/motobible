@@ -63,11 +63,11 @@ class App extends React.Component {
           </a>
           <Link to="/" className="navbar-brand">Home</Link>
 
-          <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#collapsedStuff" aria-controls="collapsedStuff" aria-expanded="false">
+          <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#collapsedStuff" aria-controls="collapsedStuff" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"/>
           </button>
 
-          <div id="collapsedStuff" className="collapse navbar-collapse">
+          <div className="collapse navbar-collapse" id="collapsedStuff" >
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                 <Link to="/blog" className="nav-link">Blog</Link>
