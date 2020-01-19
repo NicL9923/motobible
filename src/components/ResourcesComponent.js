@@ -4,33 +4,35 @@ import StateLaws from './subcomponents/StateLaws';
 class ResourcesComponent extends React.Component {
     render() {
         return(
-            <div className="container bg-light">
-                <div className="container card card-body">
-                    <div className="container my-2">
-                        <h3>Community</h3>
-                        <h5>Reddit</h5>
-                        <a href="https://www.reddit.com/r/motorcycles/">r/motorcycles</a>
-                    </div>
-                    <div className="container my-2">
-                        <h5>Youtube Channels</h5>
-                        <p><a href="https://youtube.com/user/TTheEveryThingg">DirtbikeLunatic</a></p>
-                        <p><a href="https://youtube.com/user/dirtyhusky69">Motomadness</a></p>
-                        <p><a href="https://youtube.com/user/Stubbs928">DanDanTheFireman</a></p>
-                        <p><a href="https://youtube.com/user/TheGardenSnake">Jake TheGardenSnake</a></p>
-                        <p><a href="https://youtube.com/user/Walterrificonline">Walterrific</a></p>
-                        <p><a href="https://youtube.com/user/6Foot4Honda">6Foot4Honda</a></p>
-                        <p><a href="https://youtube.com/user/snowcatxx87">Snowcat</a></p>
-                        <p><a href="https://youtube.com/user/chaseontwowheels">Chase OnTwoWheels</a></p>
-                    </div>
-                    <div className="container">
-                        <h5>Gear Stores</h5>
-                        <a href="https://revzilla.com">Revzilla</a>
+            <div className="container">
+                <div className="card">
+                    <h2 className="card-header">Community</h2>
+                    <div className="card-body">
+                        <div className="mb-2">
+                            <h4>Reddit</h4>
+                            <a href="https://www.reddit.com/r/motorcycles/">r/motorcycles</a>
+                        </div>
+                        <div className="my-2">
+                            <h4>Youtube Channels</h4>
+                            <p><a href="https://youtube.com/user/TTheEveryThingg">DirtbikeLunatic</a></p>
+                            <p><a href="https://youtube.com/user/dirtyhusky69">Motomadness</a></p>
+                            <p><a href="https://youtube.com/user/Stubbs928">DanDanTheFireman</a></p>
+                            <p><a href="https://youtube.com/user/TheGardenSnake">Jake TheGardenSnake</a></p>
+                            <p><a href="https://youtube.com/user/Walterrificonline">Walterrific</a></p>
+                            <p><a href="https://youtube.com/user/6Foot4Honda">6Foot4Honda</a></p>
+                            <p><a href="https://youtube.com/user/snowcatxx87">Snowcat</a></p>
+                            <p><a href="https://youtube.com/user/chaseontwowheels">Chase OnTwoWheels</a></p>
+                        </div>
+                        <div>
+                            <h4>Gear Stores</h4>
+                            <a href="https://revzilla.com">Revzilla</a>
+                        </div>
                     </div>
                 </div>
 
-                <div className="container card card-body my-4">
-                    <div className="container my-2">
-                        <h3>How to get YOUR Class M license</h3>
+                <div className="card my-4">
+                    <h2 className="card-header">How to Get YOUR Class M License</h2>
+                    <div className="card-body mb-2">
                         <p>To start, there are a couple ways to go about getting
                             that coveted 'M' on your driver's license. These are the general steps
                             and lack region-specific requirements so check your local DPS (Department of
@@ -69,15 +71,12 @@ class ResourcesComponent extends React.Component {
                             </li>
                             <li>Get your certificate of completion, take that sucker to the DMV, take a vision test, and walk out with your new Class M license.</li>
                         </ol>
-                        <p></p>
-                    </div>
-                    <br/>
+
                         <p>So as I said above, my personal recommendation for the sake of your time, knowledge, and skill would be the latter route, but so long as
                             the end result is you riding and staying safe out there so you can keep throwing out those two finger salutes, I'm a happy rider.
                         </p>
 
-                    <div className="container my-2">
-                        <h3>...or for my INTERNATIONAL riders</h3>
+                        <h3 className="mt-2">...or for my INTERNATIONAL riders</h3>
                         <p>Unfortunately for this one man operation and the sake of space, I will only be compiling a list
                             of resources for you to reference for your specific country. The "main" ones are listed but if 
                             you feel your country should be included and it isn't currently, you can contact me on the home page.

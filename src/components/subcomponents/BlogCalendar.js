@@ -56,12 +56,14 @@ class BlogCalendar extends React.Component {
 
     render() {
         return(
-            <div className="card card-body my-3">
-                <h3 className="mb-3">Blog Calendar</h3>
-                {this.state.dbPullIsDone && <Calendar className="mx-auto"
-                    onClickDay={this.dateClicked}
-                    tileClassName={this.getTileClass}
-                />}
+            <div className="card my-3">
+                <h3 className=" card-header mb-3">Blog Calendar</h3>
+                <div className="card-body">
+                    {this.state.dbPullIsDone && <Calendar className="mx-auto"
+                        onClickDay={this.dateClicked}
+                        tileClassName={this.getTileClass}
+                    />}
+                </div>
             </div>
         );
     }

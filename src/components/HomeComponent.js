@@ -20,7 +20,7 @@ class HomeComponent extends React.Component {
                 
                 <div className="container card card-body my-4">
                     
-                    <h3>The Motorcyclist's Bible</h3>
+                    <h2>The Motorcyclist's Bible</h2>
                     <p>Welcome to the Motorcyclist's Bible, or Moto Bible for short! If you 
                         love motorcycles, you came to the right place. Here we aim
                         to offer all riders valuable information, guidance, and ways to get connected

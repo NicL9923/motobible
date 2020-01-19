@@ -34,8 +34,8 @@ class StateLaws extends React.Component {
     
     render() {
         return(
-        <div className="container-fluid card card-body my-4">
-        <h3><b>Laws: </b>I live in 
+        <div className="card card-body my-4">
+        <h3><b>Laws: </b>I live in
         <select name="location" value={this.state.location} onChange={this.pullStateInfo}>
                 <option hidden disabled selected value></option>
             <optgroup label="United States">

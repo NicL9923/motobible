@@ -1,0 +1,27 @@
+//Remember to copy custom.min.css over to src/components/stylesheets when updating sass code
+
+//Adds new color to theme colors (can also replace if needed)
+$theme-colors: (
+  "custom-color": #900
+);
+
+
+
+//Importing all of bootstrap (later optimization: only use needed parts?)
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+
+
+
+
+
+
+/*TODOs------------------
+  -Change card-header bg colors to match the navbars bg
+
+
+
+
+*/

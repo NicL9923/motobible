@@ -151,7 +151,7 @@ class MotoQuiz extends React.Component {
                 {this.state.quizNotStarted ? (<>
                     <div className="container card-title">
                         <h2>The Moto Quiz</h2>
-                        <p>15 questions that will test your knowledge of motorcycles and riding to the extreme</p>
+                        <p className="text-muted">15 questions that will test your knowledge of motorcycles and riding to the extreme</p>
                     </div>
 
                     <div className="mx-auto text-center mb-4">

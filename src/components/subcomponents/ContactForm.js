@@ -51,8 +51,11 @@ class ContactForm extends React.Component {
 
     render() {
         return(
-            <div className="card card-body my-5">
+            <div className="card my-5">
+                <div className="card-header">
                     <h3>Contact Us</h3>
+                </div>
+                <div className="card-body">
                     <form name="contactUsForm" onSubmit={this.sendData}>
                         <div className="form-group">
                             <h4>Name:</h4>
@@ -74,8 +77,8 @@ class ContactForm extends React.Component {
                             <textarea className="form-control" value={this.state.message} onChange={this.inputChange} placeholder="Message" name="message" required/>
                         </div>
                         {this.state.formWasSubmitted ? (<div className="alert alert-success" role="alert">Your message was successfully sent! We will get back to you shortly.</div>) : (<input className="btn btn-primary" type="submit" value="Send"/>)}
-                        
                     </form>
+                </div>
             </div>
         );
     }
