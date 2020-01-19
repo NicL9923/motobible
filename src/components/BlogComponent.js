@@ -72,8 +72,8 @@ class BlogComponent extends React.Component {
                         { this.state.posts.map((post, index) => {
                             return (<article className="card card-body my-2" key={index}>
                                     <a href={this.generateLinkToPost(post.created)}><h3>{ post.title }</h3></a>
-                                    <p>by { post.author }</p>
-                                    <p>{this.convertTimestampToDate(post.created)}</p>
+                                    <h5>by { post.author }</h5>
+                                    <h6 className="text-muted">{this.convertTimestampToDate(post.created)}</h6>
                                     <p className="overflow-hidden" style={{maxHeight: "50px"}}>{ post.body }</p>
                                     <p className="read-more"><a href={this.generateLinkToPost(post.created)} className="btn btn-info">Read More</a></p>
                                 </article>)

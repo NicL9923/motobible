@@ -67,7 +67,7 @@ class FooterComponent extends React.Component {
                   <SocialIcon className="img-fluid mx-auto" url="https://www.youtube.com/channel/UCavSc27ZHAqRpMc4C-BGsbw"/>
                 </div>
                 <p>This site was self-built using React and Firebase</p>
-                <p>© 2019 themotobible.com All Rights Reserved</p>
+                <p>© 2020 themotobible.com All Rights Reserved</p>
               </div>
             </div>
         </footer>

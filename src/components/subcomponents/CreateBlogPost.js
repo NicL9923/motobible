@@ -54,6 +54,7 @@ class CreateBlogPost extends React.Component {
             console.error("Error adding document: ", error);
         });
 
+        this.setState({ posts: [] });
         this.fetchBlogPosts();
     }
 
