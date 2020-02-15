@@ -1,9 +1,20 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 class DonateComponent extends React.Component {
     render() {
         return(
         <div className="container card card-body my-3">
+            <Helmet>
+                    <title>Moto Bible | Donate</title>
+                    <meta
+                        name="description"
+                        content="Donate to The Motorcyclist's Bible"
+                    />
+                    <meta name="keywords" content="motorcycle, motorcycles, moto, motobible, rider, riding, cruising, cruiser, bike, bible, motorcyclist, 
+                    motorcyclist's, minigames, chatroom, blog, resources, license, donate, donation, support"/>
+                </Helmet>
+
             <div>
                 <h3>A Message from the Owner</h3>
                 <p>

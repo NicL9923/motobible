@@ -1,8 +1,7 @@
 import React from 'react';
-// eslint-disable-next-line
-import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
-import fire from '../firebase';
-import firebase from 'firebase';
+import { BrowserRouter as Redirect } from 'react-router-dom';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 class RegisterComponent extends React.Component {
     constructor(props) {
@@ -21,19 +20,19 @@ class RegisterComponent extends React.Component {
     
     register = e => {
         e.preventDefault();
-        fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(result => {
+        firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(result => {
             this.setState({ registered: true });
         }).catch(error => {
-            console.log(error);
+            //console.log(error);
         });
     }
 
     googleSignIn = e => {
         let provider = new firebase.auth.GoogleAuthProvider();
 
-        fire.auth().signInWithRedirect(provider);
+        firebase.auth().signInWithRedirect(provider);
 
-        fire.auth().getRedirectResult().then(result => {
+        firebase.auth().getRedirectResult().then(result => {
             if (result.credential) {
               // This gives you a Google Access Token (Google APIs)
               //let token = result.credential.accessToken;
@@ -44,7 +43,7 @@ class RegisterComponent extends React.Component {
             this.setState({ registered: true });
 
           }).catch(function(error) {
-            console.log(error);
+            //console.log(error);
         });
     }
     

@@ -1,7 +1,9 @@
 import React from 'react';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import BlogCalendar from './subcomponents/BlogCalendar';
+import { Helmet } from 'react-helmet';
 import './stylesheets/BlogComponent.css';
-import BlogCalendar from "./subcomponents/BlogCalendar";
 
 class BlogComponent extends React.Component {
     constructor(props) {
@@ -22,9 +24,9 @@ class BlogComponent extends React.Component {
         db.collection("blog").orderBy("created", "desc").limit(this.state.numPostsShown).get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
                 // doc.data() is never undefined for query doc snapshots
-                console.log(doc.id, " => ", doc.data());
+                //console.log(doc.id, " => ", doc.data());
                 this.setState({ posts: [...this.state.posts, doc.data()] });
-                console.log("Posts Array: ", this.state.posts);
+                //console.log("Posts Array: ", this.state.posts);
             });
         });
     }
@@ -63,6 +65,16 @@ class BlogComponent extends React.Component {
     render() {
         return (
             <div>
+                <Helmet>
+                    <title>Moto Bible | Blog</title>
+                    <meta
+                        name="description"
+                        content="The official blog of The Motorcyclist's Bible"
+                    />
+                    <meta name="keywords" content="motorcycle, motorcycles, moto, motobible, rider, riding, cruising, cruiser, bike, bible, motorcyclist, 
+                    motorcyclist's, minigames, chatroom, blog, resources, license"/>
+                </Helmet>
+
                 <div className="card my-3">
                     <div className="card-header">
                         <h3 className="card-title">The Moto Blog</h3>

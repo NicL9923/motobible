@@ -1,17 +1,13 @@
 import React from 'react';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 import Calendar from 'react-calendar';
 import { withRouter } from 'react-router-dom';
 import '../stylesheets/BlogComponent.css';
 
-//For unnstyled react calendar
-//import Calendar from 'react-calendar/dist/entry.nostyle'
-
 
 //TODO: Future Optimization: only pull DB posts (and scan for?) either from the current view month OR year
     //Possibly use hash table to store dates if extreme efficiency is needed
-
-//TODO: CSS Styling for dates with posts
 
 class BlogCalendar extends React.Component {
     constructor(props) {

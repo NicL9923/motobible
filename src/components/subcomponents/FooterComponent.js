@@ -1,5 +1,6 @@
 import React from 'react';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 import { SocialIcon } from 'react-social-icons';
 
 class FooterComponent extends React.Component {
@@ -23,13 +24,13 @@ class FooterComponent extends React.Component {
     //Send info to DB
     //TODO: Database check for email state, if already in, display info alert FOR no duplicates in DB
     db.collection("newsletter").doc(this.state.email).set({
-          email: this.state.email
+      email: this.state.email
     })
     .then(docRef => {
-        console.log("Document written with ID: ", docRef.id);
+      //console.log("Document written with ID: ", docRef.id);
     })
     .catch(error => {
-        console.error("Error adding document: ", error);
+      //console.error("Error adding document: ", error);
     });
     
     //Change to something more fancy later

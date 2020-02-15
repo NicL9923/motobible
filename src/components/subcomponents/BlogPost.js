@@ -1,5 +1,6 @@
 import React from 'react';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 
 class BlogPost extends React.Component {
@@ -29,7 +30,7 @@ class BlogPost extends React.Component {
         db.collection("blog").where("created", ">", timestamp).where("created", "<", timestamp2).limit(1).get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
                 // doc.data() is never undefined for query doc snapshots
-                console.log(doc.id, " => ", doc.data());
+                //console.log(doc.id, " => ", doc.data());
                 this.setState({ post: doc.data(), postExists: true });
                 this.getImageURL();
             });

@@ -2,6 +2,7 @@ import React from 'react';
 import ContactForm from './subcomponents/ContactForm';
 import Clock from './subcomponents/Clock';
 import RandomQuote from './subcomponents/RandomQuote';
+import { Helmet } from 'react-helmet';
 
 import cruiseGIF from '../resources/MotoCruiseGIF.gif';
 import authorPic from '../resources/AuthorsPic.png';
@@ -11,6 +12,15 @@ class HomeComponent extends React.Component {
     render() {
         return(
             <div className="container bg-light">
+                <Helmet>
+                    <title>The Motorcyclist's Bible</title>
+                    <meta
+                        name="description"
+                        content="Homepage of The Motorcyclist's Bible"
+                    />
+                    <meta name="keywords" content="motorcycle, motorcycles, moto, motobible, rider, riding, cruising, cruiser, bike, bible, motorcyclist, 
+                    motorcyclist's, minigames, chatroom, blog, resources, license"/>
+                </Helmet>
                 <div className="container-fluid text-center">
                     <img className="img-fluid mx-auto" src={cruiseGIF} alt="Cruising motorcycle"/>
                     {/*buttons to change moto (cruiser, sport, standard)

@@ -1,5 +1,6 @@
 import React from 'react';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 import { Facebook, Twitter, Reddit, Email } from 'react-sharingbuttons';
 import 'react-sharingbuttons/dist/main.css';
 
@@ -111,7 +112,7 @@ class MotoQuiz extends React.Component {
 
             this.randomizeAnswerOrder();
         }).catch(error => {
-            console.log("Error fetching question data: ", error);
+            //console.log("Error fetching question data: ", error);
         });
     }
 

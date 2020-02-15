@@ -1,5 +1,6 @@
 import React from 'react';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 class ContactForm extends React.Component {
     constructor(props) {
@@ -40,10 +41,10 @@ class ContactForm extends React.Component {
             created: firebase.firestore.Timestamp.now()
         })
         .then(docRef => {
-            console.log("Document written with ID: ", docRef.id);
+            //console.log("Document written with ID: ", docRef.id);
         })
         .catch(error => {
-            console.error("Error adding document: ", error);
+            //console.error("Error adding document: ", error);
         });
 
         this.setState({ name: "", email: "", subject: "", message: ""});

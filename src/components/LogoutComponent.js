@@ -1,7 +1,7 @@
 import React from 'react';
-// eslint-disable-next-line
-import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
-import fire from '../firebase';
+import { BrowserRouter as Redirect } from 'react-router-dom';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 class LogoutComponent extends React.Component {
     constructor(props) {
@@ -12,7 +12,7 @@ class LogoutComponent extends React.Component {
     }
     
     logout = e => {
-        fire.auth().signOut();
+        firebase.auth().signOut();
     }
     
     componentDidMount() {

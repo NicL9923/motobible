@@ -1,7 +1,6 @@
 import React from 'react';
-import fire from '../firebase';
-// eslint-disable-next-line
-import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 import CreateBlogPost from './subcomponents/CreateBlogPost';
 import ManageMessages from './subcomponents/ManageMessages';
 
@@ -20,7 +19,7 @@ class AdminComponent extends React.Component {
 
     authCheck = () => {
         //Note to self: never use currentUser(), always use this way due to init time
-        fire.auth().onAuthStateChanged(user => {
+        firebase.auth().onAuthStateChanged(user => {
             if (user && user.email === "nicl9923@gmail.com") {
                 this.setState({ hasAccess: true });
             } else if (user) {
@@ -33,7 +32,7 @@ class AdminComponent extends React.Component {
             else {
                 this.setState({ user: null });
             }
-            console.log(user);
+            //console.log(user);
         });
     }
     

@@ -1,5 +1,6 @@
 import React from 'react';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 class RandomQuote extends React.Component {
     constructor(props) {
@@ -23,7 +24,7 @@ class RandomQuote extends React.Component {
                 this.setState({ randomFact: stuff.fact, source: stuff.source });
             }
             else {
-                console.log("Document not found!");
+                //console.log("Document not found!");
             }
         });
     }

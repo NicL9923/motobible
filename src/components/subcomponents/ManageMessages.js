@@ -1,5 +1,6 @@
 import React from 'react';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 class ManageMessages extends React.Component {
     constructor(props) {
@@ -20,9 +21,9 @@ class ManageMessages extends React.Component {
         db.collection("messages").orderBy("created", "desc").get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
                 // doc.data() is never undefined for query doc snapshots
-                console.log(doc.id, " => ", doc.data());
+                //console.log(doc.id, " => ", doc.data());
                 this.setState({ messages: [...this.state.messages, doc.data()] });
-                console.log("Messages Array: ", this.state.messages);
+                //console.log("Messages Array: ", this.state.messages);
             });
         });
     }
@@ -47,7 +48,7 @@ class ManageMessages extends React.Component {
             alert("Successfully deleted message!");
         }).catch(error => {
             alert(error);
-            console.error("Error removing document: ", error);
+            //console.error("Error removing document: ", error);
         });
 
         this.setState({ messages: [] });

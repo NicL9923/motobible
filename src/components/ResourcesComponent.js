@@ -1,10 +1,21 @@
 import React from 'react';
 import StateLaws from './subcomponents/StateLaws';
+import { Helmet } from 'react-helmet';
 
 class ResourcesComponent extends React.Component {
     render() {
         return(
             <div className="container">
+                <Helmet>
+                    <title>Moto Bible | Resources</title>
+                    <meta
+                        name="description"
+                        content="Useful resources from The Motorcyclist's Bible"
+                    />
+                    <meta name="keywords" content="motorcycle, motorcycles, moto, motobible, rider, riding, cruising, cruiser, bike, bible, motorcyclist, 
+                    motorcyclist's, minigames, chatroom, blog, resources, license"/>
+                </Helmet>
+
                 <div className="card">
                     <h2 className="card-header">Community</h2>
                     <div className="card-body">

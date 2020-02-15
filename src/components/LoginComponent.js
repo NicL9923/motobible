@@ -1,8 +1,8 @@
 import React from 'react';
-// eslint-disable-next-line
-import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
-import fire from '../firebase';
-import firebase from 'firebase';
+import { BrowserRouter as Redirect } from 'react-router-dom';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import { Helmet } from 'react-helmet';
 
 class LoginComponent extends React.Component {
     constructor(props) {
@@ -18,10 +18,10 @@ class LoginComponent extends React.Component {
     
     signIn = e => {
         e.preventDefault();
-        fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then(result => {
+        firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then(result => {
             this.setState({ loggedIn: true });
         }).catch(error => {
-            console.log(error);
+            //console.log(error);
             this.setState({ loginFailed: true });
         });
     }
@@ -33,9 +33,9 @@ class LoginComponent extends React.Component {
     googleSignIn = e => {
         let provider = new firebase.auth.GoogleAuthProvider();
 
-        fire.auth().signInWithRedirect(provider);
+        firebase.auth().signInWithRedirect(provider);
 
-        fire.auth().getRedirectResult().then(result => {
+        firebase.auth().getRedirectResult().then(result => {
             if (result.credential) {
               //This gives you a Google Access Token (Google APIs)
               //let token = result.credential.accessToken;
@@ -48,13 +48,23 @@ class LoginComponent extends React.Component {
             setTimeout(this.setState({ loggedIn: true }), 2000);
 
           }).catch(error => {
-            console.log(error);
+            //console.log(error);
           });
     }
     
     render() {
         return(
             <div className="container card card-body my-5">
+                <Helmet>
+                    <title>Moto Bible | Login</title>
+                    <meta
+                        name="description"
+                        content="Login to The Motorcyclist's Bible"
+                    />
+                    <meta name="keywords" content="motorcycle, motorcycles, moto, motobible, rider, riding, cruising, cruiser, bike, bible, motorcyclist, 
+                    motorcyclist's, minigames, chatroom, blog, resources, license"/>
+                </Helmet>
+
                 <h3>Log In</h3>
                 {this.state.loginFailed ? (<div className="alert alert-danger" role="alert">Incorrect email and/or password</div>) : (null)}
                 <form name="loginForm" onSubmit={this.signIn}>

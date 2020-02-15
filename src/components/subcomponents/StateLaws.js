@@ -1,5 +1,6 @@
 import React from 'react';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 class StateLaws extends React.Component {
     constructor (props) {
@@ -26,7 +27,7 @@ class StateLaws extends React.Component {
                 this.setState({ helmetReq: stuff.helmetReq, gearReq: stuff.gearReq, lanesplit: stuff.lanesplit });
             }
             else {
-                console.log("Document not found!");
+                //console.log("Document not found!");
                 this.setState({ helmetReq: "N/A", gearReq: "N/A", lanesplit: "N/A"});
             }
         });
@@ -36,7 +37,7 @@ class StateLaws extends React.Component {
         return(
         <div className="card card-body my-4">
         <h3><b>Laws: </b>I live in
-        <select name="location" value={this.state.location} onChange={this.pullStateInfo}>
+        <span className="ml-2"><select name="location" value={this.state.location} onChange={this.pullStateInfo}>
                 <option hidden disabled selected value></option>
             <optgroup label="United States">
                 <option value="alabama">Alabama</option>
@@ -97,7 +98,7 @@ class StateLaws extends React.Component {
                 <option value="germany">Germany</option>
                 <option value="uk">United Kingdom</option>
             </optgroup>
-            </select>
+            </select></span>
             .</h3>
             {this.state.location && <div>
         <p><b>Helmet Required:</b> {this.state.helmetReq}</p>

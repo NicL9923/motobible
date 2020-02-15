@@ -8,9 +8,7 @@ $theme-colors: (
 
 
 //Importing all of bootstrap (later optimization: only use needed parts?)
-@import "../node_modules/bootstrap/scss/bootstrap";
-
-
+@import "../../../node_modules/bootstrap/scss/bootstrap";
 
 
 
@@ -20,8 +18,4 @@ $theme-colors: (
 
 /*TODOs------------------
   -Change card-header bg colors to match the navbars bg
-
-
-
-
 */

@@ -1,5 +1,6 @@
 import React from 'react';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 //TODO: Break down into further components cause this bad boy right here is a monstrosity
 class CreateBlogPost extends React.Component {
@@ -48,10 +49,10 @@ class CreateBlogPost extends React.Component {
         }).then(docRef => {
             alert("Blog post created successfully!");
             this.setState({ title: "", body: "" });
-            console.log("Document created successfully!");
+            //console.log("Document created successfully!");
         }).catch(error => {
             alert("Error creating blog post!");
-            console.error("Error adding document: ", error);
+            //console.error("Error adding document: ", error);
         });
 
         this.setState({ posts: [] });
@@ -65,9 +66,9 @@ class CreateBlogPost extends React.Component {
         db.collection("blog").orderBy("created", "desc").get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
                 // doc.data() is never undefined for query doc snapshots
-                console.log(doc.id, " => ", doc.data());
+                //console.log(doc.id, " => ", doc.data());
                 this.setState({ posts: [...this.state.posts, doc.data()] });
-                console.log("Posts Array: ", this.state.posts);
+                //console.log("Posts Array: ", this.state.posts);
             });
         });
     }
@@ -119,7 +120,7 @@ class CreateBlogPost extends React.Component {
                 alert("Successfully deleted old post!");
             }).catch(error => {
                 alert(error);
-                console.error("Error removing document: ", error);
+                //console.error("Error removing document: ", error);
             });
         }
         
@@ -134,7 +135,7 @@ class CreateBlogPost extends React.Component {
             alert("Blog post edited successfully!");
         }).catch(error => {
             alert("Error editing blog post!");
-            console.error("Error editing document: ", error);
+            //console.error("Error editing document: ", error);
         });
 
         this.setState({ posts: [], editingPost: false });
@@ -153,7 +154,7 @@ class CreateBlogPost extends React.Component {
             alert("Successfully deleted post!");
         }).catch(error => {
             alert(error);
-            console.error("Error removing document: ", error);
+            //console.error("Error removing document: ", error);
         });
 
         this.setState({ posts: [] });

@@ -1,24 +1,37 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import fire from "./firebase";
-import logo from "./resources/motoBibleLogo.png";
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/firestore';
+import logo from './resources/motoBibleLogo.png';
 
-import HomeComponent from "./components/HomeComponent";
-import FooterComponent from "./components/subcomponents/FooterComponent";
-import BlogComponent from "./components/BlogComponent";
-import BlogPost from "./components/subcomponents/BlogPost";
-import ChatroomComponent from "./components/ChatroomComponent";
-import MinigamesComponent from "./components/MinigamesComponent";
-import ResourcesComponent from "./components/ResourcesComponent";
-import LoginComponent from "./components/LoginComponent";
-import RegisterComponent from "./components/RegisterComponent";
-import AdminComponent from "./components/AdminComponent";
-import LogoutComponent from "./components/LogoutComponent";
-import DonateComponent from "./components/DonateComponent";
-import StoreComponent from "./components/StoreComponent";
-import PageNotFound from "./components/subcomponents/PageNotFound";
-import TermsComponent from "./components/TermsComponent";
-import PrivacyComponent from "./components/PrivacyComponent";
+import HomeComponent from './components/HomeComponent';
+import FooterComponent from './components/subcomponents/FooterComponent';
+import BlogComponent from './components/BlogComponent';
+import BlogPost from './components/subcomponents/BlogPost';
+import ChatroomComponent from './components/ChatroomComponent';
+import MinigamesComponent from './components/MinigamesComponent';
+import ResourcesComponent from './components/ResourcesComponent';
+import LoginComponent from './components/LoginComponent';
+import RegisterComponent from './components/RegisterComponent';
+import AdminComponent from './components/AdminComponent';
+import LogoutComponent from './components/LogoutComponent';
+import DonateComponent from './components/DonateComponent';
+import StoreComponent from './components/StoreComponent';
+import PageNotFound from './components/subcomponents/PageNotFound';
+import TermsComponent from './components/TermsComponent';
+import PrivacyComponent from './components/PrivacyComponent';
+
+firebase.initializeApp({
+  apiKey: "AIzaSyC8Jnl2-Iokp_abToBacIn57al_arwJBF4",
+  authDomain: "motobible.firebaseapp.com",
+  databaseURL: "https://motobible.firebaseio.com",
+  projectId: "motobible",
+  storageBucket: "motobible.appspot.com",
+  messagingSenderId: "764008121202",
+  appId: "1:764008121202:web:f242e5f71357d624c953eb",
+  measurementId: "G-28LRZ7FRR6"
+});
 
 
 class App extends React.Component {
@@ -32,7 +45,7 @@ class App extends React.Component {
   }
 
   authCheck = () => {
-    fire.auth().onAuthStateChanged(user => {
+    firebase.auth().onAuthStateChanged(user => {
       if (user) {
         // User is signed in.
         if (user.email) {
