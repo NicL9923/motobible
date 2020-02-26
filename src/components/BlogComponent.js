@@ -62,6 +62,15 @@ class BlogComponent extends React.Component {
         this.fetchBlogPosts();
     }
 
+    //Currently just a method to dangerouslySetInnerHTML
+    //Handles HTML tags (<br>, <b>, etc are main use case)
+    decodeText = postBody => {
+        //Find some way to handle tabs and newlines (\n)
+        return({
+            __html: postBody
+        });
+    }
+
     render() {
         return (
             <div>
@@ -86,7 +95,7 @@ class BlogComponent extends React.Component {
                                     <a href={this.generateLinkToPost(post.created)}><h3>{ post.title }</h3></a>
                                     <h5>by { post.author }</h5>
                                     <h6 className="text-muted">{this.convertTimestampToDate(post.created)}</h6>
-                                    <p className="overflow-hidden" style={{maxHeight: "50px"}}>{ post.body }</p>
+                                    <p className="overflow-hidden" style={{maxHeight: "50px"}} dangerouslySetInnerHTML={this.decodeText(post.body)}></p>
                                     <p className="read-more"><a href={this.generateLinkToPost(post.created)} className="btn btn-info">Read More</a></p>
                                 </article>)
                         })}
