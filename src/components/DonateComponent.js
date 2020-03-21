@@ -41,7 +41,7 @@ class DonateComponent extends React.Component {
                 <h3>Affiliate Links</h3>
                 <p><a href="https://mbsy.co/DGCz2">M1 Finance: </a>My personal investment/stock broker. Outstanding for anyone from beginners to experts, 
                 I find this broker to be the most user-friendly and accessible.</p>
-                <div class="alignleft">
+                <div className="alignleft">
                     <script type="text/javascript">
                         amzn_assoc_ad_type = "banner";
                         amzn_assoc_marketplace = "amazon";
