@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/* Color Scheme (D to L):
+#0B0C10
+#1F2833
+#C5C6C7
+#66FCF1
+#45A29E
+*/
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -11138,6 +11145,33 @@ h3 {
     border-color: #dee2e6;
   }
 }
-/*TODOs------------------
-  -Change card-header bg colors to match the navbars bg
-*/
+.navbar-color, .footer-color {
+  background-color: #0B0C10;
+}
+
+.navbar-brand, .nav-link {
+  color: white;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  color: #45A29E;
+}
+
+.card-header {
+  background-color: #1F2833;
+  color: white;
+}
+
+/*TODO*/
+.btn-info:hover {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+/*# sourceMappingURL=custom.css.map */

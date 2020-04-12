@@ -1,4 +1,13 @@
 //Remember to copy custom.min.css over to src/components/stylesheets when updating sass code
+/* Color Scheme (D to L):
+#0B0C10
+#1F2833
+#C5C6C7
+#66FCF1
+#45A29E
+*/
+
+
 
 //Adds new color to theme colors (can also replace if needed)
 $theme-colors: (
@@ -12,10 +21,37 @@ $theme-colors: (
 
 
 
+.navbar-color, .footer-color{
+  background-color: #0B0C10;
+}
 
+.navbar-brand, .nav-link {
+  color: white;
+}
 
+.navbar-brand:hover, .nav-link:hover {
+  transition: 0.3s ease;
+  color: #45A29E;
+}
 
+.card-header {
+  background-color: #1F2833;
+  color: white;
+}
 
-/*TODOs------------------
-  -Change card-header bg colors to match the navbars bg
-*/
+/*TODO*/
+.btn-info {
+
+}
+
+.btn-info:hover {
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+
+}
+
+.btn-primary:hover {
+  transition: 0.3s ease;
+}

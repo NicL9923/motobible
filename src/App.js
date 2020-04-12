@@ -70,7 +70,7 @@ class App extends React.Component {
     <Router>
       <div className="container bg-light">
 
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
+        <nav className="navbar navbar-expand-lg navbar-color mb-2">
           <a className="navbar-brand" href="/" target="_blank">
             <img src={logo} width="45" height="45" alt="TheMotoBible.com"/>
           </a>

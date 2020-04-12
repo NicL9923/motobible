@@ -89,7 +89,7 @@ class BlogComponent extends React.Component {
                         <h3 className="card-title">The Moto Blog</h3>
                         <h4 className="card-subtitle text-muted">Our Latest Posts</h4>
                     </div>
-                    <div className="card-body overflow-auto" style={{maxHeight: 300}}>
+                    <div className="card-body overflow-auto" style={{maxHeight: 500}}>
                         { this.state.posts.map((post, index) => {
                             return (<article className="card card-body my-2" key={index}>
                                     <a href={this.generateLinkToPost(post.created)}><h3>{ post.title }</h3></a>
