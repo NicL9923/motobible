@@ -1,0 +1,23 @@
+.boxOfMessages {
+    background-color: lightgrey;
+    height: 60vh;
+    overflow: auto;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.message {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #45A29E;
+    padding: 6px;
+
+}
+
+.message p {
+    margin: 0;
+}
+
+#currentUser {
+    color: blue;
+}
