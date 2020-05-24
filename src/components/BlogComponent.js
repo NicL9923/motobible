@@ -92,12 +92,12 @@ class BlogComponent extends React.Component {
                     <div className="card-body overflow-auto" style={{maxHeight: 500}}>
                         { this.state.posts.map((post, index) => {
                             return (<article className="card card-body my-2" key={index}>
-                                    <a href={this.generateLinkToPost(post.created)}><h3>{ post.title }</h3></a>
-                                    <h5>by { post.author }</h5>
-                                    <h6 className="text-muted">{this.convertTimestampToDate(post.created)}</h6>
-                                    <p className="overflow-hidden" style={{maxHeight: "50px"}} dangerouslySetInnerHTML={this.decodeText(post.body)}></p>
-                                    <p className="read-more"><a href={this.generateLinkToPost(post.created)} className="btn btn-info">Read More</a></p>
-                                </article>)
+                                        <a href={this.generateLinkToPost(post.created)}><h3>{ post.title }</h3></a>
+                                        <h5>by { post.author }</h5>
+                                        <h6 className="text-muted">{this.convertTimestampToDate(post.created)}</h6>
+                                        <p className="overflow-hidden" style={{maxHeight: "50px"}} dangerouslySetInnerHTML={this.decodeText(post.body)}></p>
+                                        <p className="read-more"><a href={this.generateLinkToPost(post.created)} className="btn btn-info">Read More</a></p>
+                                    </article>)
                         })}
                         <div className="text-center"><button className="btn btn-primary mx-auto mb-2" onClick={this.show5More}>Show 5 More</button></div>
                     </div>

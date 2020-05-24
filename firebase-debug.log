@@ -1,0 +1,172 @@
+[debug] [2020-05-24T00:05:29.599Z] ----------------------------------------------------------------------
+[debug] [2020-05-24T00:05:29.601Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nicl9\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-05-24T00:05:29.601Z] CLI Version:   8.0.3
+[debug] [2020-05-24T00:05:29.601Z] Platform:      win32
+[debug] [2020-05-24T00:05:29.601Z] Node Version:  v12.13.0
+[debug] [2020-05-24T00:05:29.603Z] Time:          Sat May 23 2020 19:05:29 GMT-0500 (Central Daylight Time)
+[debug] [2020-05-24T00:05:29.603Z] ----------------------------------------------------------------------
+[debug] [2020-05-24T00:05:29.603Z] 
+[debug] [2020-05-24T00:05:29.617Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-24T00:05:29.618Z] > authorizing via signed-in user
+[debug] [2020-05-24T00:05:29.618Z] [iam] checking project motobible for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2020-05-24T00:05:29.620Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-05-24T00:05:29.621Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-05-24T00:05:29.836Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:31 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:29.844Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/motobible:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2020-05-24T00:05:30.107Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=109","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:30.108Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/motobible/serviceAccounts/motobible@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2020-05-24T00:05:30.354Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:30.355Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/motobible  
+ 
+[debug] [2020-05-24T00:05:30.639Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'motobible'...
+[info] 
+[info] i  deploying database, firestore, functions, hosting
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script.
+[info] i  database: checking rules syntax...
+[debug] [2020-05-24T00:05:46.316Z] >>> HTTP REQUEST PUT https://motobible.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": true
+  }
+}
+[debug] [2020-05-24T00:05:46.659Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Sun, 24 May 2020 00:05:47 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] +  database: rules syntax for database motobible is valid
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[info] i  cloud.firestore: checking firestore.rules for compilation errors...
+[debug] [2020-05-24T00:05:46.663Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/motobible:test  
+ {"source":{"files":[{"name":"firestore.rules","content":"rules_version = '2';\nservice cloud.firestore {\n  match /databases/{database}/documents {\n\n    match /{document=**} {\n      allow read;\n      allow create, write, update, delete: if request.auth.token.email == \"nicl9923@gmail.com\";\n    }\n  }\n}"}]}}
+[debug] [2020-05-24T00:05:46.871Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully
+[debug] [2020-05-24T00:05:46.874Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "dependencies": {
+    "firebase-admin": "^8.6.0",
+    "firebase-functions": "^3.3.0",
+    "nodemailer": "^6.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2020-05-24T00:05:46.875Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/motobible/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2020-05-24T00:05:46.876Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/motobible/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2020-05-24T00:05:47.154Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:48.039Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  functions: all necessary APIs are enabled
+[debug] [2020-05-24T00:05:48.041Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/motobible/adminSdkConfig  
+ 
+[debug] [2020-05-24T00:05:48.451Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:49 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:48.453Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/motobible/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-05-24T00:05:49.312Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:50 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:49.315Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/motobible/releases?pageSize=10&pageToken=  
+ 
+[debug] [2020-05-24T00:05:49.315Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/motobible/databases/(default)/collectionGroups/-/indexes  
+ 
+[debug] [2020-05-24T00:05:49.570Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:50 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:49.571Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/motobible/rulesets/91281139-0995-4d13-a309-6733f1ce1e4b  
+ 
+[debug] [2020-05-24T00:05:49.605Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:50 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:49.606Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/motobible/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false  
+ 
+[debug] [2020-05-24T00:05:49.720Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:50 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload...
+[debug] [2020-05-24T00:05:49.902Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  firestore: deployed indexes in firestore.indexes.json successfully
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2020-05-24T00:05:49.905Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/motobible/configs  
+ 
+[debug] [2020-05-24T00:05:50.249Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:50.250Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/motobible/configs/gmail/variables  
+ 
+[debug] [2020-05-24T00:05:50.428Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:50.429Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/motobible/configs/gmail/variables/login  
+ 
+[debug] [2020-05-24T00:05:50.429Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/motobible/configs/gmail/variables/pass  
+ 
+[debug] [2020-05-24T00:05:50.617Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:50.667Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: packaged functions (37.27 KB) for uploading
+[debug] [2020-05-24T00:05:51.160Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/motobible/locations/-/functions  
+ 
+[debug] [2020-05-24T00:05:51.647Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:51.649Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/motobible/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2020-05-24T00:05:52.430Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:53 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:52.431Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-cb388eb9-7983-4ec9-b6f7-4ffd291a63e3/e2068445-9b88-4b80-a9a5-148dd6b8183a.zip?GoogleAccessId=service-764008121202@gcf-admin-robot.iam.gserviceaccount.com&Expires=1590280553&Signature=cEPo2iA2QOzMdO3jaHfX0MAPWWy9hHFsx5XHLNaMTp8RuKXVQ%2B%2B0M7VghOQHf9Dm1tGTn9vK8RRUeIiBNMsM0AhodNH8bMCKrE6pGDcs8K2IM45ARcqHZe8YWR%2BcnpUFRf7Ws4k1JgURbXtAUTURFTUN67sOFr3YqsGH%2F%2BKlXpkhKQ0wBjqGEaCMjGkRq3epyB2EP2yEOpfqfdMrupjd8QnVxpPgYT8okF9qXEVYHbLCXmNFafP0gc85ZklER9DHA3oZ5NnNOSKLARCHKcoEdYIDn%2FpDdmL4%2FHgSTkGEaUCTOxOu%2BGryoZCYfF15SJ9zrLhjlRTyRcbwTWR%2BIPH03Q%3D%3D  
+ <request body omitted>
+[debug] [2020-05-24T00:05:52.738Z] <<< HTTP RESPONSE 200 {"x-guploader-uploadid":"AAANsUmXNlFAPpQWTrprT126bG9P7CulD6wdmPKyiQtJFumOx_E7-8daLRy1WhWVyU4P6DccDVNVzCr-nyvaz5REiw","etag":"\"3752737d865c8c3cc85ccc46ea684344\"","x-goog-generation":"1590278753908528","x-goog-metageneration":"1","x-goog-hash":"crc32c=cRNBDA==, md5=N1JzfYZcjDzIXMxG6mhDRA==","x-goog-stored-content-length":"38162","x-goog-stored-content-encoding":"identity","vary":"Origin","content-length":"0","date":"Sun, 24 May 2020 00:05:53 GMT","server":"UploadServer","content-type":"text/html; charset=UTF-8","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""}
+[info] +  functions: functions folder uploaded successfully
+[info] i  hosting[motobible]: beginning deploy...
+[info] i  hosting[motobible]: found 35 files in build
+[debug] [2020-05-24T00:05:53.231Z] [hosting] hash cache [YnVpbGQ] stored for 35 files
+[debug] [2020-05-24T00:05:53.231Z] [hosting][hash queue][FINAL] {"max":446,"min":13,"avg":44.68571428571428,"active":0,"complete":35,"success":35,"errored":0,"retried":0,"total":35,"elapsed":458}
+[debug] [2020-05-24T00:05:53.231Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/motobible/versions/3148c5dff804f0de:populateFiles  
+ <request body omitted>
+[debug] [2020-05-24T00:05:53.638Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:54 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:53.651Z] [hosting][populate queue][FINAL] {"max":411,"min":411,"avg":411,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":422}
+[debug] [2020-05-24T00:05:53.651Z] [hosting] uploads queued: 25
+[debug] [2020-05-24T00:05:56.178Z] [hosting][upload queue][FINAL] {"max":2539,"min":655,"avg":1016.08,"active":0,"complete":25,"success":25,"errored":0,"retried":0,"total":25,"elapsed":2539}
+[info] +  hosting[motobible]: file upload complete
+[debug] [2020-05-24T00:05:56.179Z] [hosting] deploy completed after 3439ms
+[info] i  database: releasing rules...
+[debug] [2020-05-24T00:05:56.334Z] >>> HTTP REQUEST PUT https://motobible.firebaseio.com/.settings/rules.json  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": true
+  }
+}
+[debug] [2020-05-24T00:05:56.781Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Sun, 24 May 2020 00:05:57 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] +  database: rules for database motobible released successfully
+[debug] [2020-05-24T00:05:56.782Z] [rules] releasing cloud.firestore with ruleset projects/motobible/rulesets/91281139-0995-4d13-a309-6733f1ce1e4b
+[debug] [2020-05-24T00:05:56.783Z] >>> HTTP REQUEST PATCH https://firebaserules.googleapis.com/v1/projects/motobible/releases/cloud.firestore  
+ {"release":{"name":"projects/motobible/releases/cloud.firestore","rulesetName":"projects/motobible/rulesets/91281139-0995-4d13-a309-6733f1ce1e4b"}}
+[debug] [2020-05-24T00:05:57.074Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:58 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:57.075Z] [rules] updated release projects/motobible/releases/cloud.firestore
+[info] +  firestore: released rules firestore.rules to cloud.firestore
+[info] i  functions: updating Node.js 8 function onMessageAdded(us-central1)...
+[debug] [2020-05-24T00:05:57.081Z] Trigger is:  {"eventTrigger":{"resource":"projects/motobible/databases/(default)/documents/messages/{msgID}","eventType":"providers/cloud.firestore/eventTypes/document.create","service":"firestore.googleapis.com"}}
+[debug] [2020-05-24T00:05:57.082Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/motobible/services/cloudscheduler.googleapis.com  
+ 
+[debug] [2020-05-24T00:05:57.302Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:58 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:57.303Z] >>> HTTP REQUEST PATCH https://cloudfunctions.googleapis.com/v1/projects/motobible/locations/us-central1/functions/onMessageAdded {"updateMask":"sourceUploadUrl,name,labels,runtime,eventTrigger.resource,eventTrigger.eventType,eventTrigger.service"} 
+ {"sourceUploadUrl":"https://storage.googleapis.com/gcf-upload-us-central1-cb388eb9-7983-4ec9-b6f7-4ffd291a63e3/e2068445-9b88-4b80-a9a5-148dd6b8183a.zip?GoogleAccessId=service-764008121202@gcf-admin-robot.iam.gserviceaccount.com&Expires=1590280553&Signature=cEPo2iA2QOzMdO3jaHfX0MAPWWy9hHFsx5XHLNaMTp8RuKXVQ%2B%2B0M7VghOQHf9Dm1tGTn9vK8RRUeIiBNMsM0AhodNH8bMCKrE6pGDcs8K2IM45ARcqHZe8YWR%2BcnpUFRf7Ws4k1JgURbXtAUTURFTUN67sOFr3YqsGH%2F%2BKlXpkhKQ0wBjqGEaCMjGkRq3epyB2EP2yEOpfqfdMrupjd8QnVxpPgYT8okF9qXEVYHbLCXmNFafP0gc85ZklER9DHA3oZ5NnNOSKLARCHKcoEdYIDn%2FpDdmL4%2FHgSTkGEaUCTOxOu%2BGryoZCYfF15SJ9zrLhjlRTyRcbwTWR%2BIPH03Q%3D%3D","name":"projects/motobible/locations/us-central1/functions/onMessageAdded","labels":{"deployment-tool":"cli-firebase"},"eventTrigger":{"resource":"projects/motobible/databases/(default)/documents/messages/{msgID}","eventType":"providers/cloud.firestore/eventTypes/document.create","service":"firestore.googleapis.com"},"runtime":"nodejs8"}
+[debug] [2020-05-24T00:05:57.987Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:05:57.989Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bW90b2JpYmxlL3VzLWNlbnRyYWwxL29uTWVzc2FnZUFkZGVkL3llS2toX1pheFdR  
+ 
+[debug] [2020-05-24T00:05:58.241Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:05:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:06:00.241Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bW90b2JpYmxlL3VzLWNlbnRyYWwxL29uTWVzc2FnZUFkZGVkL3llS2toX1pheFdR  
+ 
+[debug] [2020-05-24T00:06:00.501Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:06:01 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:06:02.502Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bW90b2JpYmxlL3VzLWNlbnRyYWwxL29uTWVzc2FnZUFkZGVkL3llS2toX1pheFdR  
+ 
+[debug] [2020-05-24T00:06:02.765Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:06:03 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T00:06:04.766Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bW90b2JpYmxlL3VzLWNlbnRyYWwxL29uTWVzc2FnZUFkZGVkL3llS2toX1pheFdR  
+ 
+[debug] [2020-05-24T00:06:05.033Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 00:06:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
