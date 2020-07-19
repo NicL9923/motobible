@@ -29,7 +29,7 @@ class ManageMessages extends React.Component {
     }
 
     convertTimestampToDate = timestamp => {
-        let timePosted = timestamp.toDate().toString();
+        let timePosted = timestamp.toDate().toLocaleString();
 
         return(
             <p>{timePosted}</p>

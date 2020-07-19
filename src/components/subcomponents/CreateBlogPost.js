@@ -74,7 +74,7 @@ class CreateBlogPost extends React.Component {
     }
 
     convertTimestampToDate = timestamp => {
-        let timePosted = timestamp.toDate().toString().substr(4, 17);
+        let timePosted = timestamp.toDate().toLocaleString();
 
         return(
             <>{timePosted}</>

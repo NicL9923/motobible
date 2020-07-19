@@ -151,7 +151,7 @@ class ChatroomComponent extends React.Component {
                                                 <div className="message" key={message.timestamp}>
                                                     <p id="currentUser">{message.chatName}:</p>
                                                     <p>{message.content}</p>
-                                                    <p><small>{new Date(message.timestamp).toString()}</small></p>
+                                                    <p><small>{new Date(message.timestamp).toLocaleString()}</small></p>
                                                 </div>
                                             );
                                         }
@@ -161,7 +161,7 @@ class ChatroomComponent extends React.Component {
                                                 <div className="message" key={message.timestamp}>
                                                     <p id="otherUsers">{message.chatName}:</p>
                                                     <p>{message.content}</p>
-                                                    <p><small>{new Date(message.timestamp).toString()}</small></p>
+                                                    <p><small>{new Date(message.timestamp).toLocaleString()}</small></p>
                                                 </div>
                                             );
                                         }

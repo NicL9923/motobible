@@ -40,7 +40,7 @@ class BlogPost extends React.Component {
 
     //If having issue in future, issue may be result of preceding '0' on day/month
     convertTimestampToDate = timestamp => {
-        let timePosted = timestamp.toDate().toString().substr(4, 17);
+        let timePosted = timestamp.toDate().toLocaleString();
 
         return(
             <>{timePosted}</>
