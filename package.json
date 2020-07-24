@@ -6,7 +6,7 @@
     "@widgetbot/react-embed": "^1.2.2",
     "bootstrap": "^4.5.0",
     "discord.js": "^11.6.4",
-    "firebase": "^7.14.5",
+    "firebase": "^7.17.0",
     "firebase-functions": "^3.8.0",
     "react": "^16.13.1",
     "react-calendar": "^2.19.2",
@@ -16,7 +16,7 @@
     "react-scripts": "3.2.0",
     "react-sharingbuttons": "^1.0.0",
     "react-social-icons": "^4.1.0",
-    "sass": "^1.26.5"
+    "sass": "^1.26.10"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,7 +41,7 @@
     ]
   },
   "devDependencies": {
-    "react-snap": "^1.10.0"
+    "react-snap": "^1.10.1"
   },
   "reactSnap": {
     "puppeteerArgs": [
