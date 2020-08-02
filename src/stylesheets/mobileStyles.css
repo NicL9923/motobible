@@ -1,0 +1,37 @@
+@media screen and (max-width: 600px) {
+    
+    /*  Nav */
+    .navMenu {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        display: block;
+    }
+
+    nav {
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+    }
+
+    .navRight, .navLeft {
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+    }
+
+    .navRight {
+        margin-top: 15px;
+    }
+
+    .navRight a, .navLeft a {
+        justify-content: left;
+        padding: 10px;
+    }
+
+    /*  Footer  */
+    footer {
+        grid-template-columns: auto;
+        row-gap: 30px;
+    }
+}

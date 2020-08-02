@@ -3,7 +3,6 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import BlogCalendar from './subcomponents/BlogCalendar';
 import { Helmet } from 'react-helmet';
-import './stylesheets/BlogComponent.css';
 
 class BlogComponent extends React.Component {
     constructor(props) {

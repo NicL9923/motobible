@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
-import './stylesheets/ChatroomComponent.css';
 
 /* TODOs:
 -Put edit button by signed-in name to pop up a simple text/button form

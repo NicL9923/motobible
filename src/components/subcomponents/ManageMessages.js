@@ -15,8 +15,7 @@ class ManageMessages extends React.Component {
     }
 
     fetchContactMessages = () => {
-        //Get all contact messages
-        const db = firebase.firestore();
+        let db = firebase.firestore();
 
         db.collection("messages").orderBy("created", "desc").get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
@@ -38,7 +37,7 @@ class ManageMessages extends React.Component {
 
     deleteContactMessage = (e, messageSubject) => {
         e.preventDefault();
-        const db = firebase.firestore();
+        let db = firebase.firestore();
 
         if (!window.confirm("Delete " + messageSubject + " message?")) {
             return;

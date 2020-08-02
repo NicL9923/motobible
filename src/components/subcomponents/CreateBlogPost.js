@@ -101,6 +101,7 @@ class CreateBlogPost extends React.Component {
     //Below (startEdit/editBlogPost) is my currently horribly rigged way to edit a post (delete old and create entirely new one)
     //but it's the only solution i could think of that worked with firebase and its not a commonly used
     //feature so I think it's fine (for now)
+    //TODO: Update to uh...the document.update() method
     startEdit = (e, postTitle, postImage, postAuthor, postBody, postCreated) => {
         e.preventDefault();
         this.setState({ editingPost: true, editingTitle: postTitle, oldTitle: postTitle, editingImage: postImage, editingAuthor: postAuthor, editingBody: postBody, editingCreated: postCreated });

@@ -1,7 +1,6 @@
 import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
-import { SocialIcon } from 'react-social-icons';
 
 class FooterComponent extends React.Component {
   constructor(props) {
@@ -19,9 +18,8 @@ class FooterComponent extends React.Component {
 
   subscribe = e => {
     e.preventDefault();
-    const db = firebase.firestore();
+    let db = firebase.firestore();
 
-    //Send info to DB
     //TODO: Database check for email state, if already in, display info alert FOR no duplicates in DB
     db.collection("newsletter").doc(this.state.email).set({
       email: this.state.email
@@ -40,38 +38,37 @@ class FooterComponent extends React.Component {
 
   render() {
         return(
-        <footer className="footer footer-color text-light p-2">
-            <div className="container-fluid row p-6">
-              <div className='col'>
-                <div className="container text-center">
-                  <h5>Sign up for our biweekly newsletter:</h5>
-                  <form onSubmit={this.subscribe}><input onChange={this.handleChange} type="email" className="form-control" name="email" placeholder="Email"/>
-                  <input className="btn btn-primary mt-1" type="submit" value="Subscribe"/></form>
-                  <br/>
-                  <p>Based in Houston, TX</p>
-                  <p><a href="/terms">Terms</a> | <a href="/privacy">Privacy</a></p>
-              </div>
+          <footer>
+            <div>
+              <h5>Sign up for our biweekly newsletter:</h5>
+              <form onSubmit={this.subscribe}>
+                <input onChange={this.handleChange} type="email" name="email" placeholder="Email"/>
+                <input type="submit" value="Subscribe"/>
+              </form>
+              <p>Based in Houston, TX</p>
+              <p><a href="/terms">Terms</a> | <a href="/privacy">Privacy</a></p>
             </div>
-              <div className='col text-center'>
-                <h5>About Us</h5>
-                <p>The Motorcyclist's Bible, or Moto Bible, was made
-                  to bring together riders from all over. We aim to keep you
-                  connected to other riders and sharp on your riding skills and knowledge. 
-                  If you love motorcycles, you have a home here!
-                </p>
-              </div>
-              <div className='col text-center'>
-                <h5>Social Media</h5>
-                <div className="row mx-auto">
-                  <SocialIcon className="img-fluid mx-auto" url="https://twitter.com/MotoBible"/>
-                  <SocialIcon className="img-fluid mx-auto" url="https://www.instagram.com/motorcyclistsbible/" bgColor="#833ab4" fgColor="#e1306c"/>
-                  <SocialIcon className="img-fluid mx-auto" url="https://www.youtube.com/channel/UCavSc27ZHAqRpMc4C-BGsbw"/>
-                </div>
-                <p>This site was self-built using React and Firebase</p>
-                <p>© 2020 themotobible.com All Rights Reserved</p>
-              </div>
+
+            <div>
+              <h5>About Us</h5>
+              <p>The Motorcyclist's Bible, or Moto Bible, was made
+                to bring together riders from all over. We aim to keep you
+                connected to other riders and sharp on your riding skills and knowledge. 
+                If you love motorcycles, you have a home here!
+              </p>
             </div>
-        </footer>
+            
+            <div>
+              <h5>Social Media</h5>
+              <div>
+                <a href="https://twitter.com/MotoBible"><i class="fa fa-twitter fa-2x" aria-hidden="false"></i></a>
+                <a href="https://www.instagram.com/motorcyclistsbible/"><i class="fa fa-instagram fa-2x" aria-hidden="false"></i></a>
+                <a href="https://www.youtube.com/channel/UCavSc27ZHAqRpMc4C-BGsbw"><i class="fa fa-youtube-play fa-2x" aria-hidden="false"></i></a>
+              </div>
+              <p>This site was self-built using ReactJS and Google Firebase</p>
+              <p>© 2020 themotobible.com All Rights Reserved</p>
+            </div>
+          </footer>
         );
     }
 }

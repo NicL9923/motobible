@@ -6,7 +6,7 @@ class RandomQuote extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            randomFact: "This is a random fact!",
+            randomFact: "If you're seeing this, something broke!",
             source: "yours truly"
         }
     }
