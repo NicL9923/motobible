@@ -11,7 +11,7 @@ import authorPic from '../resources/AuthorsPic.png';
 class HomeComponent extends React.Component {
     render() {
         return(
-            <div className="container bg-light">
+            <div>
                 <Helmet>
                     <title>The Motorcyclist's Bible</title>
                     <meta
@@ -21,17 +21,16 @@ class HomeComponent extends React.Component {
                     <meta name="keywords" content="motorcycle, motorcycles, moto, motobible, rider, riding, cruising, cruiser, bike, bible, motorcyclist, 
                     motorcyclist's, minigames, chatroom, blog, resources, license"/>
                 </Helmet>
-                <div className="container-fluid text-center">
-                    <img className="img-fluid mx-auto" src={cruiseGIF} alt="Cruising motorcycle"/>
+                <header>
+                    <img src={cruiseGIF} alt="Cruising motorcycle"/>
                     {/*buttons to change moto (cruiser, sport, standard)
                     buttons to change environment (woodlands, desert, snow)*/}
                     <Clock/>
-                </div>
+                </header>
                 
-                <div className="card my-4">
-                    
-                    <h2 className="card-header">The Motorcyclist's Bible</h2>
-                    <div className="card-body">
+                <div className="welcomeBox">
+                    <h2>The Motorcyclist's Bible</h2>
+                    <div>
                         <p>
                             Welcome to the Motorcyclist's Bible, or Moto Bible for short! If you 
                             love motorcycles, you came to the right place. Here we aim
@@ -39,8 +38,8 @@ class HomeComponent extends React.Component {
                             with the whole community!
                         </p>
                         
-                        <div className="row">
-                            <div className="col-md-6">
+                        <div className="welcomeMid">
+                            <div>
                                 <p>Here you'll find:</p>
                                 <ul>
                                     <li>A <b>blog</b> about the latest and greatest gear, riding tips, community, etc.</li>
@@ -48,16 +47,16 @@ class HomeComponent extends React.Component {
                                     <li>Some <b>minigames</b> to get you in the riding spirit</li>
                                     <li>Great <b>resources</b> on gear, skills, and the riding community</li>
                                 </ul>
-                                <p>Thanks for stopping by and we hope you find the Moto Bible useful!</p>
+                                <p>Thanks for stopping by! We hope you find the Moto Bible useful!</p>
                             </div>
-                            <div className="col-md-6">
-                                <img src={authorPic} alt="Author" height="40%" width="40%" className="img-fluid rounded-circle mx-auto d-block"/>
-                            </div>
-                        </div>
 
-                        <br/>
-                        <p>Ride free brothers and sisters,</p>
-                        <p>Nicolas Layne</p>
+                            <img className="authorPic" src={authorPic} alt="Author" height="40%" width="40%"/>
+                        </div>
+                        
+                        <div>
+                            <p>Ride free brothers and sisters,</p>
+                            <p>Nicolas Layne</p>
+                        </div>
                     </div>
                 </div>
                 
@@ -65,7 +64,6 @@ class HomeComponent extends React.Component {
 
                 <ContactForm/>
             </div>
-
         );
     }
 };

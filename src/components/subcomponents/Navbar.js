@@ -7,7 +7,7 @@ class Navbar extends React.Component {
     constructor() {
         super();
         this.state = {
-            navMenuHidden: true
+            navMenuHidden: document.documentElement.clientWidth < 600
         }
     }
     

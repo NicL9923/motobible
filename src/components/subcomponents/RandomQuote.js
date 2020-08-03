@@ -23,23 +23,18 @@ class RandomQuote extends React.Component {
                 let stuff = doc.data();
                 this.setState({ randomFact: stuff.fact, source: stuff.source });
             }
-            else {
-                //console.log("Document not found!");
-            }
         });
     }
     
     render() {
         return(
-        <div className="card my-4">
-            <h3 className="card-header">Moto Fact of the Day</h3>
-            <div className="card-body">
-                <blockquote className="blockquote text-center">
-                    <p className="mb-0">{this.state.randomFact}</p>
-                    <footer className="blockquote-footer">Courtesy of <cite title="Source Title">{this.state.source}</cite></footer>
+            <div className="motofactBox">
+                <h3>Moto Fact of the Day</h3>
+                <blockquote className="motofactQuote">
+                    <p>{this.state.randomFact}</p>
+                    <p>Courtesy of <cite title="Source Title">{this.state.source}</cite></p>
                 </blockquote>
             </div>
-        </div>
         );
     }
 }

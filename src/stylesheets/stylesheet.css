@@ -58,3 +58,60 @@ footer {
 footer * {
     color: #fafafa;
 }
+
+
+/*      Home        */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #0049B7;
+}
+
+.clock {
+    font-weight: bold;
+    color: #fafafa;
+}
+
+.authorPic {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin-left: 20%;
+}
+
+.welcomeBox {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.welcomeMid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.motofactBox {
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #0049B7;
+}
+
+.motofactBox * {
+    color: #fafafa;
+}
+
+.motofactQuote {
+    
+}
+
+.contactFormDiv {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contactForm {
+    display: inline-block;
+    text-align: left;
+}

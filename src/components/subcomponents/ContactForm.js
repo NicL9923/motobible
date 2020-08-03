@@ -25,7 +25,7 @@ class ContactForm extends React.Component {
         e.preventDefault();
         this.setState({ formWasSubmitted: true });
 
-        const db = firebase.firestore();
+        let db = firebase.firestore();
 
         //My odd attempt at handling the off chance of a duplicate subject
         if (db.collection("messages").doc(this.state.subject)) {
@@ -52,34 +52,32 @@ class ContactForm extends React.Component {
 
     render() {
         return(
-            <div className="card my-5">
-                <div className="card-header">
+            <div className="contactFormDiv">
+                <form className="contactForm" name="contactUsForm" onSubmit={this.sendData} method="POST">
                     <h3>Contact Us</h3>
-                </div>
-                <div className="card-body">
-                    <form name="contactUsForm" onSubmit={this.sendData}>
-                        <div className="form-group">
-                            <h4>Name:</h4>
-                            <input className="form-control" type="text" value={this.state.name} onChange={this.inputChange} placeholder="Name" name="name" required/>
-                        </div>
+                    
+                    <div>
+                        <h4>Name:</h4>
+                        <input type="text" value={this.state.name} onChange={this.inputChange} placeholder="Name" name="name" required/>
+                    </div>
 
-                        <div className="form-group">
-                            <h4>Email:</h4>
-                            <input className="form-control" type="email"value={this.state.email} onChange={this.inputChange} placeholder="Email" name="email" required/>
-                        </div>
+                    <div>
+                        <h4>Email:</h4>
+                        <input type="email"value={this.state.email} onChange={this.inputChange} placeholder="Email" name="email" required/>
+                    </div>
 
-                        <div className="form-group">
-                            <h4>Subject:</h4>
-                            <input className="form-control" type="text" value={this.state.subject} onChange={this.inputChange} placeholder="Subject" name="subject" required/>
-                        </div>
+                    <div>
+                        <h4>Subject:</h4>
+                        <input type="text" value={this.state.subject} onChange={this.inputChange} placeholder="Subject" name="subject" required/>
+                    </div>
 
-                        <div className="form-group">
-                            <h4>Message:</h4>
-                            <textarea className="form-control" value={this.state.message} onChange={this.inputChange} placeholder="Message" name="message" required/>
-                        </div>
-                        {this.state.formWasSubmitted ? (<div className="alert alert-success" role="alert">Your message was successfully sent! We will get back to you shortly.</div>) : (<input className="btn btn-primary" type="submit" value="Send"/>)}
-                    </form>
-                </div>
+                    <div>
+                        <h4>Message:</h4>
+                        <textarea value={this.state.message} onChange={this.inputChange} placeholder="Message" name="message" required/>
+                    </div>
+
+                    {this.state.formWasSubmitted ? (<div className="alert alert-success" role="alert">Your message was successfully sent! We will get back to you shortly.</div>) : (<input className="btn btn-primary" type="submit" value="Send"/>)}
+                </form>
             </div>
         );
     }

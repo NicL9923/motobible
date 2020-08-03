@@ -25,9 +25,7 @@ class Clock extends React.Component {
 
     render() {
         return(
-            <div className="nav-item text-center">
-                <h4><b>{this.state.date.toLocaleString()}</b></h4>
-            </div>
+            <h4 className="clock">{this.state.date.toLocaleString()}</h4>
         );
     }
 };
