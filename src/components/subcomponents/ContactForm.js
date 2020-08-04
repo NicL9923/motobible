@@ -76,7 +76,7 @@ class ContactForm extends React.Component {
                         <textarea value={this.state.message} onChange={this.inputChange} placeholder="Message" name="message" required/>
                     </div>
 
-                    {this.state.formWasSubmitted ? (<div className="alert alert-success" role="alert">Your message was successfully sent! We will get back to you shortly.</div>) : (<input className="btn btn-primary" type="submit" value="Send"/>)}
+                    {this.state.formWasSubmitted ? (<div className="contactFormSubmitted" role="alert">Your message was successfully sent! We will get back to you shortly.</div>) : (<input className="btn btn-primary" type="submit" value="Send"/>)}
                 </form>
             </div>
         );

@@ -70,6 +70,7 @@ header {
 .clock {
     font-weight: bold;
     color: #fafafa;
+    font-size: 18px;
 }
 
 .authorPic {
@@ -82,7 +83,16 @@ header {
 .welcomeBox {
     width: 50%;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 75px 0;
+}
+
+.welcomeBox * {
+    font-size: 18px;
+}
+
+.welcomeBox h2 {
+    font-size: 32px;
+    padding: 10px 0;
 }
 
 .welcomeMid {
@@ -91,9 +101,12 @@ header {
     align-items: center;
 }
 
+.welcomeMid div * {
+}
+
 .motofactBox {
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
     background-color: #0049B7;
 }
@@ -102,16 +115,81 @@ header {
     color: #fafafa;
 }
 
+.motofactBox h3 {
+    font-size: 32px;
+}
+
 .motofactQuote {
-    
+    width: 40%;
+    margin: 0 auto;
+}
+
+.motofactFact {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.motofactCite {
+    font-size: 14px;
+    color: #cccccc;
+    display: block;
 }
 
 .contactFormDiv {
-    padding: 20px 0;
+    padding: 75px 0;
     text-align: center;
 }
 
 .contactForm {
     display: inline-block;
     text-align: left;
+    background-color: #0049B7;
+    padding: 20px;
+    box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.75);
 }
+
+.contactForm div {
+    margin: 15px 0;
+}
+
+.contactForm input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.contactForm textarea {
+    padding: 5px;
+    font-size: 16px;
+    font-family: 'Roboto', 'sans-serif';
+    width: 400px;
+    resize: vertical;
+}
+
+.contactFormSubmitted {
+    background-color: rgb(129, 243, 129);
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/*  Blog    */
+
+
+/*  Chatroom    */
+
+
+/*  Minigames   */
+
+
+/*  Resources   */
+
+
+/*  Store   */
+
+
+/*  Login   */
+
+/*  Register    */
+
+/*  Support Us  */
+
+/*  404 Page    */

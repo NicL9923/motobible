@@ -31,8 +31,8 @@ class RandomQuote extends React.Component {
             <div className="motofactBox">
                 <h3>Moto Fact of the Day</h3>
                 <blockquote className="motofactQuote">
-                    <p>{this.state.randomFact}</p>
-                    <p>Courtesy of <cite title="Source Title">{this.state.source}</cite></p>
+                    <p className="motofactFact">{this.state.randomFact}</p>
+                    <cite className="motofactCite" title="Source Title">-Courtesy of {this.state.source}</cite>
                 </blockquote>
             </div>
         );
