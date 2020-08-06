@@ -40,17 +40,17 @@ class FooterComponent extends React.Component {
         return(
           <footer>
             <div>
-              <h5>Sign up for our biweekly newsletter:</h5>
-              <form onSubmit={this.subscribe}>
-                <input onChange={this.handleChange} type="email" name="email" placeholder="Email"/>
-                <input type="submit" value="Subscribe"/>
+              <h5 className="footerHdr">Sign up for our biweekly newsletter:</h5>
+              <form className="newsletterForm" onSubmit={this.subscribe} method="POST">
+                <input className="subscribeEmail" onChange={this.handleChange} type="email" name="email" placeholder="Email"/>
+                <input className="subscribeBn" type="submit" value="Subscribe"/>
               </form>
               <p>Based in Houston, TX</p>
               <p><a href="/terms">Terms</a> | <a href="/privacy">Privacy</a></p>
             </div>
 
             <div>
-              <h5>About Us</h5>
+              <h5 className="footerHdr">About Us</h5>
               <p>The Motorcyclist's Bible, or Moto Bible, was made
                 to bring together riders from all over. We aim to keep you
                 connected to other riders and sharp on your riding skills and knowledge. 
@@ -59,8 +59,8 @@ class FooterComponent extends React.Component {
             </div>
             
             <div>
-              <h5>Social Media</h5>
-              <div>
+              <h5 className="footerHdr">Social Media</h5>
+              <div className="socialMediaIcons">
                 <a href="https://twitter.com/MotoBible"><i class="fa fa-twitter fa-2x" aria-hidden="false"></i></a>
                 <a href="https://www.instagram.com/motorcyclistsbible/"><i class="fa fa-instagram fa-2x" aria-hidden="false"></i></a>
                 <a href="https://www.youtube.com/channel/UCavSc27ZHAqRpMc4C-BGsbw"><i class="fa fa-youtube-play fa-2x" aria-hidden="false"></i></a>

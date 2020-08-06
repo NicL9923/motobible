@@ -33,7 +33,7 @@ class Navbar extends React.Component {
                 <div className="navRight" style={this.state.navMenuHidden ? { display: "none"} : { display: "flex" }}>
                     {this.props.user ? (<Link to="/logout">Logout</Link>) : (<><Link to="/login">Login</Link>
                     <Link to="/register">Register</Link></>)}
-                    <Link to="/donate"><button>Support Us</button></Link>
+                    <Link to="/donate"><button className="supportUsBn">Support Us</button></Link>
                 </div>
 
                 <i class="navMenu fa fa-bars fa-2x" aria-hidden="false" onClick={this.showMenu}></i>

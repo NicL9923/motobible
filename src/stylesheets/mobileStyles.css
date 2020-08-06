@@ -29,6 +29,10 @@
         padding: 10px;
     }
 
+    .navRight {
+        margin-left: 0;
+    }
+
     /*  Footer  */
     footer {
         grid-template-columns: auto;

@@ -4,7 +4,6 @@ nav {
     background-color: #212121;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     height: auto;
 }
@@ -19,6 +18,10 @@ nav * {
     flex-direction: row;
     align-self: stretch;
     align-items: center;
+}
+
+.navRight {
+    margin-left: auto;
 }
 
 .navLogo {
@@ -44,6 +47,17 @@ nav * {
     display: none;
 }
 
+.supportUsBn {
+    font-size: 16px;
+    padding: 8px;
+    border: none;
+    background-color: #0049B7;
+}
+
+.supportUsBn:hover {
+    cursor: pointer;
+}
+
 /* Footer */
 
 footer {
@@ -57,6 +71,50 @@ footer {
 
 footer * {
     color: #fafafa;
+    font-size: 16px;
+}
+
+.footerHdr {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.newsletterForm * {
+    display: block;
+}
+
+.newsletterForm {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.subscribeEmail {
+    color: #212121;
+    padding: 3px;
+    width: 50%;
+}
+
+.subscribeBn {
+    padding: 8px;
+    border: none;
+    background-color: #0049B7;
+    transition: 0.3s ease;
+}
+
+.subscribeBn:hover {
+    background-color: #066ae4;
+    cursor: pointer;
+}
+
+.socialMediaIcons {
+    margin-bottom: 10px;
+}
+
+.socialMediaIcons a i {
+    margin-right: 16px;
 }
 
 
@@ -136,20 +194,34 @@ header {
 }
 
 .contactFormDiv {
-    padding: 75px 0;
+    padding: 40px 0;
     text-align: center;
 }
 
 .contactForm {
     display: inline-block;
     text-align: left;
-    background-color: #0049B7;
-    padding: 20px;
-    box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.75);
+}
+
+.contactForm h3 {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.contactFormSubhdr {
+    color: #505050;
+    width: 400px;
+    margin-bottom: 35px;
 }
 
 .contactForm div {
     margin: 15px 0;
+}
+
+.contactForm div h4 {
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .contactForm input {
@@ -162,7 +234,24 @@ header {
     font-size: 16px;
     font-family: 'Roboto', 'sans-serif';
     width: 400px;
+    height: 100px;
     resize: vertical;
+}
+
+.contactFormSubmitBn {
+    border: none;
+    background-color: #0049B7;
+    color: #fafafa;
+    padding: 8px !important;
+    margin: 15px 0;
+    transition: 0.3s ease;
+    font-size: 18px !important;
+}
+
+.contactFormSubmitBn:hover {
+    background-color: #066ae4;
+    color: #fafafa;
+    cursor: pointer;
 }
 
 .contactFormSubmitted {
